@@ -22,6 +22,6 @@ Set up an NGINX server for the new website.  Once the server is in place, the de
     systemctl status nginx --no-pager
     nginx -t
     ```
-1. Check the installation by viewing the webiste URL in a browser.
+1. Check the installation by viewing the webiste URL in a browser.  The page should show content similar to the following image:
 ![Welcome to NGINX](./welcome-to-nginx.png)
 
