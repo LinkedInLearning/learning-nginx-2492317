@@ -35,4 +35,4 @@ Deploy an NGINX server with a custom configuration.
     }
     ```
 1. Update the confguration to include a location for `/complete` that is only served on exact matches
-1. Update the location to use custom logging to a file named `custom.access.log` in the default logging locaiton for NGINX.
+1. Update the location to use custom logging to a file named `complete.access.log` in the default logging locaiton for NGINX.
