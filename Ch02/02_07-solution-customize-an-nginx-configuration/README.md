@@ -47,7 +47,9 @@ Deploy an NGINX server with a custom configuration.
 1. Validate the custom logging by viewing the contents of the log file in `/var/log/nginx/`.
 
 The complete configuration is as follows:
+
 [solution.complete.conf](./solution.complete.conf)
+
 ```nginx
 server {
     listen 80 default_server;
