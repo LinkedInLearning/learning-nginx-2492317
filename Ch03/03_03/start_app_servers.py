@@ -49,7 +49,7 @@ def start_server(port):
     print(time.strftime('%X'), "App server stopped - http://%s:%s" % (hostName, port))
 
 # list of the ports the servers will listen on
-PORTS = [7001, 7002, 7003]
+PORTS = [7001]
 
 # list to hold the PIDs from the forked servers
 SERVERS = []
