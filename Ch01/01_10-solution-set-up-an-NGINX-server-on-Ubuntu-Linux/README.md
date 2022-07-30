@@ -23,3 +23,5 @@ Set up an NGINX server for the new website.  Once the server is in place, the de
     nginx -t
     ```
 1. Check the installation by viewing the webiste URL in a browser.
+![Welcome to NGINX](./welcome-to-nginx.png)
+
