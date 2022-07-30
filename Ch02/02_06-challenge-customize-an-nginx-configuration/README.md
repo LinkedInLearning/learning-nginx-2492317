@@ -6,8 +6,8 @@ Deploy an NGINX server with a custom configuration.
 1. Remove the default NGINX configuration
 1. Add the following configuration file below to the correct location on the server.
     
-    [custom.conf](./custom.conf)
-    ```
+    [complete.conf](./complete.conf)
+    ```nginx
     server {
         listen 80 default_server;
         listen [::]:80;
