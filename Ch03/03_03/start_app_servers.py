@@ -54,6 +54,8 @@ PORTS = [7001]
 # list to hold the PIDs from the forked servers
 SERVERS = []
 
+print("Type CTRL+C to stop processing requests...")
+
 # start a fork for each port
 for port in PORTS:
     pid = os.fork()
