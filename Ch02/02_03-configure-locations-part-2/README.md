@@ -1,3 +1,22 @@
+# 02_03 Configure locations - Part 2
+
+Update the configuration for the demo site by adding location directives for:
+- the root of the site
+- images
+- error pages
+
+# Directive documentation
+- [`location`](http://nginx.org/en/docs/http/ngx_http_core_module.html#location)
+- [`try_files`](http://nginx.org/en/docs/http/ngx_http_core_module.html#try_files)
+- [`autoindex`](http://nginx.org/en/docs/http/ngx_http_autoindex_module.html#autoindex)
+- [`error_page`](http://nginx.org/en/docs/http/ngx_http_core_module.html#error_page)
+- [`internal`](http://nginx.org/en/docs/http/ngx_http_core_module.html#internal)
+
+# Updated configuration
+
+[binaryville.conf](./binaryville.conf)
+
+```NGINX
 server {
 	listen 80;
 	root /var/www/binaryville;
@@ -36,3 +55,4 @@ server {
 		fastcgi_pass unix:/this/will/fail;
 	}
 }
+```
