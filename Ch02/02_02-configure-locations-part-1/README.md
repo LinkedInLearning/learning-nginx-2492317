@@ -39,5 +39,5 @@ The location directive uses modifiers, prefix strings, and regular expressions.
 When Nginx processes locations, it uses a series of matches to determine the best location to use:
 1. Exact match locations are considered first.
 1. Then locations with prefixes.
-1. Then locations with regular expressions. in this example, the regular expression would not take the case of the URI into consideration.
+1. Then locations with regular expressions.
 
