@@ -78,5 +78,5 @@ server {
     location /uuid {
         proxy_pass http://uuid/;
     }
-    }
+}
 ```
