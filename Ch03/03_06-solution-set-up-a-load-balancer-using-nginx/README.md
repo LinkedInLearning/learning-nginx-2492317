@@ -25,7 +25,7 @@ Deploy a load balancer using NGINX.
 
 1. Add a location that proxies requests from the group on `/uuid`.
 
-    ```
+    ```NGINX
     location /uuid {
         proxy_pass http://uuid/;
     }
@@ -33,7 +33,7 @@ Deploy a load balancer using NGINX.
 
 1. Start the UUID generator using the provided Python script: [uuid-generator.py](./uuid-generator.py)
 
-    ```
+    ```Bash
     # Note that you will need to run this command from
     # the directory containing the exercise files for this challange
     python3 ./uuid-generator.py
@@ -42,7 +42,7 @@ Deploy a load balancer using NGINX.
 1. Test your NGINX configuration in a browser using the address for your VM.
 1. Confirm that responses from the server show each port from the group in sequence along with a UUID.  Output should be simliar to the following:
 
-    ```
+    ```Bash
     # First request
     Generator #9001
     UUID=c7d2b4b8-815b-4710-8e50-d864bd443651
