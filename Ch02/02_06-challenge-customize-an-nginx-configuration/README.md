@@ -2,10 +2,10 @@
 
 Deploy an NGINX server with a custom configuration.
 
-# Requirements
+## Requirements
 1. Remove the default NGINX configuration
 1. Add the following configuration file below to the correct location on the server.
-    
+
     [complete.conf](./complete.conf)
     ```nginx
     server {
@@ -19,7 +19,7 @@ Deploy an NGINX server with a custom configuration.
             # Check out the following URL for more details:
             # http://nginx.org/en/docs/http/ngx_http_log_module.html#access_log
             access_log ________ADD_THE_CUSTOM_LOG_FILE_HERE________;
-            
+
             # The `return` directive tells NGINX to stop processing and return
             # the specified code along with an optional response.
             # Check out the following URL for more details:

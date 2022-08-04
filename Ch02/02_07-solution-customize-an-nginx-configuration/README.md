@@ -2,7 +2,7 @@
 
 Deploy an NGINX server with a custom configuration.
 
-# Solution
+## Solution
 1. Remove the default NGINX configuration.  Connect to the server where a fresh installation of NGINX is in place. Run the following commands:
     ```
     sudo su -
