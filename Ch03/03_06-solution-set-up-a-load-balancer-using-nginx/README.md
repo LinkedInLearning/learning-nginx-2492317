@@ -13,7 +13,7 @@ Deploy a load balancer using NGINX.
     mv load_balancer.conf /etc/nginx/conf.d
     ```
 
-1. Add a configuration named `uuid` that alternates traffic across three ports: `9001`, `9002`, and `9003`.
+1. Add a group named `uuid` that alternates traffic across three ports: `9001`, `9002`, and `9003`.
 
     ```NGINX
     upstream uuid {
@@ -23,7 +23,7 @@ Deploy a load balancer using NGINX.
     }
     ```
 
-1. Add a location that proxies requests from the group on `/uuid`.
+1. Add a location for `/uuid` that proxies requests from the group named `uuid`.
 
     ```NGINX
     location /uuid {
