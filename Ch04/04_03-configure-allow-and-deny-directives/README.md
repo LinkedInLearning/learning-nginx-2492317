@@ -3,8 +3,8 @@
 Limiting access is one of the ways we can help secure the contents of a site.  Fortunately, nginx provides the HTTP Access module that includes `allow` and `deny` directives. These are used to limit who is allowed to see certain content and who gets denied.
 
 In NGINX configurations, `allow` and `deny` rules:
- - Can be used in the http, server, and location contexts
- - Specify patterns to match incoming requests
+- Can be used in the http, server, and location contexts
+- Specify patterns to match incoming requests
     - The keyword `all`
     - An IP address: `192.168.1.1`
     - A CIDR block: `192.168.0.0/16`
