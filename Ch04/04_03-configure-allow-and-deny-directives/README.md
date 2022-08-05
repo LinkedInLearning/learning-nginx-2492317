@@ -20,7 +20,7 @@ The following example will:
 - Allow requests from all private IP addresses using CIDR notation
 - Deny requests from all other addresses
 
-```
+```NGINX
 location /admin {
 	allow 192.168.1.1;
 	allow 10.0.0.0/8;
