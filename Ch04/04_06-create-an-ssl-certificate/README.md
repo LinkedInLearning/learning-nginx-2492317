@@ -21,5 +21,7 @@ An SSL certificate is a digital certificate that authenticates a website's ident
     - Store the certificate and key in locations accessible to NGINX
 
     ```
-    openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx.key -out /etc/ssl/certs/nginx.crt -batch
+    openssl req -batch -x509 -nodes -days 365 -newkey rsa:2048 \
+        -keyout /etc/ssl/private/nginx.key \
+        -out /etc/ssl/certs/nginx.crt
     ```
