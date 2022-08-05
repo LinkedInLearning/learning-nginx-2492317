@@ -19,19 +19,24 @@ Password authentication:
     ```
 
 Use the `htpasswd` program to create a password file
-- Install the `apache2-utils` package to access `htpasswd`: `sudo apt install -y apache2-utils`
+- Install the `apache2-utils` package to access `htpasswd`
+
+    ```BASH
+    sudo apt install -y apache2-utils
+    ```
+
 - Create a password file
 
-    ```
+    ```BASH
     htpasswd -c /path/to/file username
     ```
 
 # Example configuration
 
-```
+```NGINX
 location /admin {
- 	auth_basic “Please authenticate…”;
+ 	auth_basic 'Please authenticate...';
   	auth_basic_user_file /etc/nginx/passwords;
- 	…
+ 	...
 }
 ```
