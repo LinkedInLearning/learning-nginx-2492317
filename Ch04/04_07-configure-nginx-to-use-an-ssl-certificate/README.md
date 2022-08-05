@@ -26,4 +26,35 @@ An SSL certificate is a digital certificate that authenticates a website's ident
         -out /etc/ssl/certs/nginx.crt
     ```
 
+## Redirecting non-SSL requests
+Use a server block to redirect all requests to the HTTPS server.
 
+```NGINX
+server {
+        listen 80;
+        return 301 https://$server_addr$request_uri;
+}
+```
+
+Check the documentation for more information on NGINX variables.
+
+[Alphabetical index of variables](http://nginx.org/en/docs/varindex.html)
+
+## Configuring SSL
+The HTTPS server block should be configured to listen on port 443.  This is the standard port used to serve encrypted traffic.
+
+Following the Port is the directive `ssl`.  This tells NGINX to process requests using SSL.
+
+The next two lines let NGINX know where to find the SSL certificate and the certificate key to use for encryption and identification.
+
+
+```NGINX
+server {
+    listen 443 ssl default_server;
+    ssl_certificate /etc/ssl/certs/nginx.crt;
+    ssl_certificate_key /etc/ssl/private/nginx.key;
+    ...
+}
+```
+
+[binaryville.conf](./binaryville.conf)
