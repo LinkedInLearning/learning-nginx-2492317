@@ -17,8 +17,8 @@ An SSL certificate is a digital certificate that authenticates a website's ident
 
 3. Use the following command to:
     - Create a private key
+    - Create a certificate
     - Sign the certificate with the key
-    - Store the certificate and key in locations accessible to NGINX
 
     ```
     openssl req -batch -x509 -nodes -days 365 -newkey rsa:2048 \
