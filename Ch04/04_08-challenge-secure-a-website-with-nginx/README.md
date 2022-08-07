@@ -7,6 +7,7 @@ Secure a website using NGINX.
 1. Install NGINX and remove the default configuration
 1. Add a new configuration for the preview site
 1. Configure basic authentication for the entire site
+    [preview.conf](./preview.conf)
     ```NGINX
     server {
         listen 80 default_server;
