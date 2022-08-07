@@ -13,11 +13,13 @@ Secure a website using NGINX.
     apt install -y nginx
     unlink /etc/nginx/sites-enabled/default
     ```
+
 1. Add a new configuration for the preview site
 
     ```BASH
     vim /etc/nginx/conf.d/preview.conf
     ```
+
 1. Configure basic authentication for the entire site
 
     [preview.conf](./preview.conf)
@@ -30,6 +32,7 @@ Secure a website using NGINX.
         auth_basic_user_file /etc/nginx/passwords;
     }
     ```
+
 1. Allow  access with username “CEO” with password “qwerty”
 
     1. Install the `apache2-utils` package to provide access to the `htpasswd` program.
@@ -37,9 +40,11 @@ Secure a website using NGINX.
         ```BASH
         apt install -y apache2-utils
         ```
+
     1. Create an entry in `/etc/nginx/passwords` for the username `CEO` with password `qwerty`.
 
         ```BASH
         htpasswd -c /etc/nginx/passwords CEO
         ```
+
 1. Validate the configuration with a browser
