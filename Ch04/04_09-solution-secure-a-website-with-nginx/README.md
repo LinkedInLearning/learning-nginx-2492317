@@ -34,12 +34,12 @@ Secure a website using NGINX.
 
     1. Install the `apache2-utils` package to provide access to the `htpasswd` program.
 
-    ```BASH
-    apt install -y apache2-utils
-    ```
+        ```BASH
+        apt install -y apache2-utils
+        ```
     1. Create an entry in `/etc/nginx/passwords` for the username `CEO` with password `qwerty`.
 
-    ```BASH
-    htpasswd -c /etc/nginx/passwords CEO
-    ```
+        ```BASH
+        htpasswd -c /etc/nginx/passwords CEO
+        ```
 1. Validate the configuration with a browser
