@@ -2,7 +2,7 @@
 
 Build a container for the Binaryville website.
 
-_*NOTE: To keep the size of the repo as small as possible, please use the files from the challenge directory for the solution.  The solution commands are the same as the commands for the challenge requirements.*_
+_*NOTE: To keep the size of the repo as small as possible, please use the files from [the challenge directory](../05_04-challenge-build-an-nginx-container-image/README.md) for the solution.  The solution commands are the same as the commands for the challenge requirements.*_
 
 ## Solution
 
