@@ -34,7 +34,7 @@ COPY ./scripts/wrapper.sh /docker-entrypoint.d/wrapper.sh
 COPY ./config/binaryville.conf /etc/nginx/conf.d/default.conf
 
 # If you have problems using the SSL enabled configuraion, use the
-# following configuraiton instead.
+# following configuration instead.
 # Note that you will have to use `docker run --publish 80:80 binaryville` as well.
 # COPY ./config/binaryville-no-ssl.conf /etc/nginx/conf.d/default.conf
 
