@@ -10,9 +10,9 @@ RUN apt update
 RUN apt install -y python3
 
 # Install the Apache2 Utilities
-RUN apt install -y apache2-utils 
+RUN apt install -y apache2-utils
 
-# Use htpasswd to create a password file with credentials 
+# Use htpasswd to create a password file with credentials
 # for a user named "robots" with the password "123456"
 RUN htpasswd -b -c /etc/nginx/passwords robots 123456
 
@@ -33,6 +33,11 @@ COPY ./scripts/wrapper.sh /docker-entrypoint.d/wrapper.sh
 # the default configuration.
 COPY ./config/binaryville.conf /etc/nginx/conf.d/default.conf
 
+# If you have problems using the SSL enabled configuraion, use the
+# following configuraiton instead.
+# Note that you will have to use `docker run --publish 80:80 binaryville` as well.
+# COPY ./config/binaryville-no-ssl.conf /etc/nginx/conf.d/default.conf
+
 # Copy the Binaryville website contents into the default root directory
 COPY ./website/ /usr/share/nginx/html
- 
+
