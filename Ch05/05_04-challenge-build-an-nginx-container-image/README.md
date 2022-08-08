@@ -13,6 +13,8 @@ Build a container for the Binaryville website.
 
     - Take a look at the `Dockerfile` to review the `FROM`, `RUN`, and `COPY` commands.
 
+        [Dockerfile](./Dockerfile)
+
 1. Build an image with the `docker build` command
 
     ```BASH
