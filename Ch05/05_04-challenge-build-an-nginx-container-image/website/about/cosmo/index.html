@@ -1,0 +1,702 @@
+<!doctype html>
+<html class="overflow-x:hidden" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About | Characters | Cosmo - Binaryville</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  
+    <link rel="stylesheet" href="/assets/main.min.css?4a368bd4242c04b985f2dcf94f8d196d">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+</head>
+<body>
+  <script>!function(e,n,o){var i=e+"-svg",t=new XMLHttpRequest,s=document.body,a=document.createElement("div"),d=(o||window.location.protocol+"//"+window.location.hostname+(window.location.port?":"+window.location.port:""))+n,c=" no-svg";if(a.id=i,s.insertBefore(a,s.childNodes[0]),"withCredentials"in t)t.withCredentials,t.open("GET",d,!0);else{if("undefined"==typeof XDomainRequest)return s.className+=c;(t=new XDomainRequest).open("GET",d)}t.onload=function(){a.className="visually-hidden",a.innerHTML=t.responseText},t.onerror=function(){s.className+=c},setTimeout(t.send(),0)}("icons","/images/icons.svg?05bcceb46e51bbafbc3992edb9ff5dae")</script>
+  <script>function fetchSvgInline(e){var t=new XMLHttpRequest,i=e.currentSrc||e.src;if("withCredentials"in t)t.withCredentials,t.open("GET",i,!0);else{if("undefined"==typeof XDomainRequest)return;(t=new XDomainRequest).open("GET",i)}t.onload=function(){var i=t.responseText;if(-1!==i.indexOf("<svg")){var n=document.createElement("span");n.innerHTML=i;var s=n.getElementsByTagName("svg")[0];s.setAttribute("aria-label",e.alt||""),s.setAttribute("class",e.className),s.setAttribute("focusable",!1),s.setAttribute("role","img"),e.height&&s.setAttribute("height",e.height),e.width&&s.setAttribute("width",e.width),e.parentNode.replaceChild(s,e)}},t.onerror=function(){e.classList.add("not-inline")},setTimeout(t.send(),0)}</script>
+
+
+
+
+<div id="vue-header" q-data='{"expandedSubMenus":{},"navigationIsExpanded":false}'>
+  <!-- <q> -->
+<template q-component="v-icon-button">
+  <component v-bind:class="[
+      styles.root,
+      styles.variant[variant]
+    ]" v-bind:href="href" v-bind:is="elem">
+    <v-svg v-bind:class="iconClassName" v-bind:name="iconName"></v-svg>
+
+    <span v-bind:class="[
+        styles.badge.base,
+        styles.badge.std,
+      ]" v-if="badge">
+      {{ badge }}
+    </span>
+    <span v-bind:class="[
+        styles.badge.base,
+        styles.badge.alt,
+      ]" v-if="badgeAlt">
+      {{ badgeAlt }}
+    </span>
+  </component>
+</template>
+<!-- </q> -->
+
+
+  
+
+<header class="display:flex flex-wrap:wrap justify-content:space-between padding:16px position:relative @mq-960--display:none">
+  <div class="">
+    
+
+<button class="group display:inline-block position:relative color:neutral-3a3a3d padding:8px :hocus--color:orange-ff583d" aria-controls="navigation" aria-haspopup="true" aria-label="Main navigation" ref="hamburger" v-bind:aria-expanded="String(navigationIsExpanded)" v-cloak v-on:click="toggleNavigation">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:28px" focusable="false">
+  <use xlink:href="#hamburger"/>
+</svg>
+
+
+  
+</button>
+
+
+  </div>
+
+  <v-icon-button aria-label="Shopping Cart" class="color:neutral-3a3a3d padding:8px :hocus--color:orange-ff583d" href="/cart" icon-class-name="
+      size:28px
+    " icon-name="cart" v-bind:badge="cartQuantity" v-bind:badge-alt="cartSubTotal"></v-icon-button>
+
+  <div class="margin-vertical:16px text-align:center width:100%">
+    <a aria-label="Home" class="position:relative text-align:center" href="/">
+      <img alt="Binaryville logo" class="max-width:100% size:logo-210x109px" src="/images/logo.svg">
+    </a>
+  </div>
+
+  <nav aria-labelledby="main-navigation-mobile-heading" class="background-color:neutral-000000A40 display:none pos-top-left-bottom-right:0 position:fixed z-index:100 is-expanded--display:block" ref="navigation" tabindex="-1" v-bind:class="navigationIsExpanded && states.isExpanded">
+    <h2 class="visually-hidden" id="main-navigation-mobile-heading">
+      Main navigation
+    </h2>
+    <div class="background-color:neutral-ffffff height:100% width:80%">
+      
+
+<button class="group display:inline-block position:relative color:neutral-3a3a3d padding:8px :hocus--color:orange-ff583d margin:16px" aria-controls="navigation" aria-haspopup="true" aria-label="Main navigation" ref="hamburger" v-bind:aria-expanded="String(navigationIsExpanded)" v-cloak v-on:click="toggleNavigation">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:28px" focusable="false">
+  <use xlink:href="#cross"/>
+</svg>
+
+
+  
+</button>
+
+
+      <div class="border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px"></div>
+      <ul class="font-size:18px height:100% overflow-y:auto position:relative">
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d is-selected" href="/about/">
+  <span class="display:inline-block">
+    About
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/shop/">
+  <span class="display:inline-block">
+    Shop
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/blog/">
+  <span class="display:inline-block">
+    Blog
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/contact/">
+  <span class="display:inline-block">
+    Contact
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/account/">
+  <span class="display:inline-block">
+    Account
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  
+
+<header class="border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px display:none padding-vertical:8px @mq-960--display:block">
+  
+  <div class="margin-horizontal:auto max-width:container padding-horizontal:32px">
+
+    <div class="align-items:center display:flex justify-content:center position:relative">
+      <a aria-label="Home" class="display:inline-block" href="/">
+        <img alt="Binaryville logo" class="size:logo-152x78px" src="/images/logo.svg">
+      </a>
+
+      <nav aria-labelledby="main-navigation-desktop-heading" class="display:flex margin-left:-12px pos-left:0 position:absolute">
+        <h2 class="visually-hidden" id="main-navigation-desktop-heading">
+          Main navigation
+        </h2>
+
+        <ul class="align-items:center display:flex">
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline is-selected" href="/about/">
+  About
+</a>
+
+            </li>
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/shop/">
+  Shop
+</a>
+
+            </li>
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/blog/">
+  Blog
+</a>
+
+            </li>
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/contact/">
+  Contact
+</a>
+
+            </li>
+          
+        </ul>
+      </nav>
+
+      <div class="align-items:center display:flex pos-right:0 position:absolute">
+        
+
+<a class="group display:inline-block position:relative color:neutral-3a3a3d margin-left:8px padding:8px :hocus--color:orange-ff583d" href="/account/" aria-label="Account">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:28px" focusable="false">
+  <use xlink:href="#bust"/>
+</svg>
+
+
+  
+</a>
+
+
+        <v-icon-button aria-label="Shopping Cart" class="color:neutral-3a3a3d margin-left:8px padding:8px :hocus--color:orange-ff583d" href="/cart" icon-class-name="
+      size:28px
+    " icon-name="cart" v-bind:badge="cartQuantity" v-bind:badge-alt="cartSubTotal"></v-icon-button>
+      </div>
+    </div>
+  </div>
+</header>
+
+</div>
+
+<main>
+  
+
+<div class="background-image:character-hero">
+  
+  <div class="margin-horizontal:auto max-width:container padding-horizontal:32px padding-vertical:24px @mq-960--display:flex @mq-960--padding-bottom:32px @mq-960--padding-top:12px">
+
+    <div>
+      
+
+<h2 class="font-size:28px font-weight:500 line-height:1.142 margin-bottom:16px @mq-960--font-size:40px @mq-960--line-height:1.05 @mq-960--margin-top:48px">
+  Cosmo
+</h2>
+
+
+      <p class="line-height:1.375">
+        
+      For an esteemed aeronautical engineer who manned the first ever flight to Mars from Binaryville (or anywhere), Cosmo is one of the most down-to-earth folks you'll ever meet. His favorite pastimes are playing bingo, soaking up the sun at Binaryville Beach, and reading spy novels.
+    
+      </p>
+    </div>
+
+    <div class="text-align:center">
+      <img alt="Three images of Cosmo" class="@mq-upto-960--height:auto @mq-upto-960--max-width:100%" height="330" src="/images/characters/cosmo-hero.png" width="680">
+    </div>
+  </div>
+</div>
+
+
+  
+  <div class="margin-horizontal:auto max-width:container padding-horizontal:32px padding-vertical:32px">
+
+    
+
+<h2 class="font-size:32px line-height:1.125 margin-bottom:16px @mq-960--margin-bottom:24px text-align:center">
+  Cosmo Merchandise
+</h2>
+
+
+    
+
+    
+      
+
+<div class="align-items:center display:flex justify-content:space-between overflow:hidden padding-left:32px @mq-768--padding-left:48px background-image:shop-hero-purple">
+  <div class="line-height:1.375 padding-vertical:24px @mq-768--font-size:18px @mq-768--margin-right:48px @mq-768--line-height:1.166 @mq-768--width:60% color:neutral-ffffff align-items:center display:flex flex-direction:row-reverse">
+    
+    <img alt="Montage of products" class="float:right shape-outside:product-montage-cropped @mq-768--display:none" height="240" src="/images/product-montage-cropped.png">
+    <p class="margin-bottom:16px @mq-768--margin-bottom:32px">
+      
+          Check back here for <b>new merchandise</b> featuring  your favorite Binaryville characters, <b>coming soon</b>!
+        
+    </p>
+    
+  </div>
+  <div class="">
+    <picture>
+      <source media="(min-width: 48em)" srcset="/images/product-montage.png">
+      <img alt="Montage of products" class="align-self:center display:none justify-self:center max-width:100% @mq-768--display:inline" src="/images/product-montage-cropped.png">
+    </picture>
+  </div>
+</div>
+
+    
+  </div>
+</main>
+
+
+
+<footer class="background-color:blue-c5e6f9 color:blue-324f6b padding-horizontal:8px padding-vertical:32px @mq-800--padding-vertical:64px">
+  
+  <div class="margin-horizontal:auto max-width:container padding-horizontal:32px">
+
+    <h2 class="font-weight:500 font-size:28px line-height:1.142 margin-bottom:32px text-align:center @mq-800--font-size:36px @mq-800--font-weight:400 @mq-800--line-height:1.222 @mq-800--margin-bottom:48px">
+      Meet the Robots
+    </h2>
+
+    
+  <ul class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-16px margin-bottom:-32px justify-content:center margin-horizontal:-24px">
+
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/rex/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Rex" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/rex-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Rex
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/dolores/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Dolores" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/dolores-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Dolores
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/bubbles/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Bubbles" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/bubbles-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Bubbles
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/fred/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Fred" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/fred-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Fred
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/rivet/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Rivet" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/rivet-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Rivet
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/eileen/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Eileen" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/eileen-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Eileen
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/belle/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Belle" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/belle-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Belle
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/cosmo/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Cosmo" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/cosmo-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Cosmo
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/dolly/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Dolly" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/dolly-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Dolly
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/sergeant/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Sergeant" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/sergeant-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Sergeant
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/oscar/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Oscar" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/oscar-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Oscar
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/levi/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Levi" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/levi-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Levi
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/elton/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Elton" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/elton-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Elton
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/spring/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Spring" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/spring-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Spring
+  </span>
+</a>
+
+        </li>
+      
+    </ul>
+
+    <nav class="margin-horizontal:-48px">
+      <ul class="align-items:center display:inline-flex justify-content:center margin-vertical:32px margin-horizontal:auto flex-wrap:wrap width:100% @mq-800--padding-top:8px">
+        <li class="display:flex justify-content:center margin-bottom:32px width:100% @mq-800--margin-bottom:0 @mq-800--margin-horizontal:32px @mq-800--order:1 @mq-800--width:auto">
+          <a aria-label="Home" href="/">
+            <img class="" alt="Binaryville logo" height="88" src="/images/logo.svg" width="170">
+          </a>
+        </li>
+        <li>
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/about/">
+            About
+          </a>
+        </li>
+        <li>
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/blog/">
+            Blog
+          </a>
+        </li>
+        <li class="@mq-800--order:1">
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/contact/">
+            Contact
+          </a>
+        </li>
+        <li class="@mq-800--order:1">
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/shop">
+            Shop
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <h3 class="visually-hidden">
+      Follow us
+    </h3>
+    
+  <ul class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-8px margin-bottom:-16px justify-content:center margin-bottom:24px">
+
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on facebook" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://www.facebook.com/binaryville/">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#facebook"/>
+</svg>
+
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on twitter" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://twitter.com/binaryville">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#twitter"/>
+</svg>
+
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on instagram" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://www.instagram.com/binaryville/">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#instagram"/>
+</svg>
+
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on linkedin" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://www.linkedin.com/company/binaryville">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#linkedin"/>
+</svg>
+
+</a>
+
+        </li>
+      
+    </ul>
+
+    <p class="border-top-style:solid border-top-width:2px font-size:12px letter-spacing:0.33 line-height:1.5 padding-top:24px @mq-800--font-size:14px @mq-800--line-height:1.285 @mq-800--margin-horizontal:64px @mq-800--padding-horizontal:32px @mq-800--text-align:center">
+      This is a fictitious company created by LinkedIn Corporation, or its affiliates, solely for the creation and development of educational training materials. Any resemblance to real products or services is purely coincidental. Information provided about the products or services is also fictitious and should not be construed as representative of actual products or services on the market in a similar product or service category.
+    </p>
+  </div>
+</footer>
+
+
+<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.from"></script>
+<script src="/assets/vendor.js?0625f37913a2cd194a2203fceebee1ec"></script>
+<script src="/assets/main.js?d8948a8cb13029cce7fa35597cd634a0"></script>
+</body>
+</html>
+

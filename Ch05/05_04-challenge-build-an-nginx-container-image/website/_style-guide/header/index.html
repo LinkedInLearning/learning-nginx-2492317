@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>header - Binaryville Styleguide</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  
+    <link rel="stylesheet" href="/assets/main.min.css?[object Object]">
+  
+  <style>
+    #container {
+      padding-top: 46px;
+    }
+
+    #nav {
+      background: #fff;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      position: fixed;
+      top: 0;
+      white-space: nowrap;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    #nav a {
+      display: inline-block;
+      color: #000;
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+
+    #nav a[aria-selected="true"] {
+      background: #eee;
+    }
+
+    #nav a:focus,
+    #nav a:hover {
+      background: #ddd;
+    }
+
+    #props {
+      font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
+      white-space: pre-wrap
+    }
+
+    .padding {
+      padding: 10px;
+    }
+
+    .swatch-title {
+      font-size: 1em;
+    }
+
+    .swatch-list {
+      border-radius: 5px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+      display: inline-flex;
+      flex-wrap: wrap;
+      list-style: none;
+      overflow: hidden;
+      margin: 0.5em 0 1em;
+    }
+
+    .swatch {
+      flex-shrink: 0;
+      height: 90px;
+      overflow: hidden;
+      position: relative;
+      width: 90px;
+    }
+
+    .swatch::after {
+      color: #fff;
+      content: attr(class);
+      font-size: 13px;
+      position: absolute;
+      right: 5px;
+      text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <script>!function(e,n,o){var i=e+"-svg",t=new XMLHttpRequest,s=document.body,a=document.createElement("div"),d=(o||window.location.protocol+"//"+window.location.hostname+(window.location.port?":"+window.location.port:""))+n,c=" no-svg";if(a.id=i,s.insertBefore(a,s.childNodes[0]),"withCredentials"in t)t.withCredentials,t.open("GET",d,!0);else{if("undefined"==typeof XDomainRequest)return s.className+=c;(t=new XDomainRequest).open("GET",d)}t.onload=function(){a.className="visually-hidden",a.innerHTML=t.responseText},t.onerror=function(){s.className+=c},setTimeout(t.send(),0)}("icons","/images/icons.svg")</script>
+  <script>function fetchSvgInline(e){var t=new XMLHttpRequest,i=e.currentSrc||e.src;if("withCredentials"in t)t.withCredentials,t.open("GET",i,!0);else{if("undefined"==typeof XDomainRequest)return;(t=new XDomainRequest).open("GET",i)}t.onload=function(){var i=t.responseText;if(-1!==i.indexOf("<svg")){var n=document.createElement("span");n.innerHTML=i;var s=n.getElementsByTagName("svg")[0];s.setAttribute("aria-label",e.alt||""),s.setAttribute("class",e.className),s.setAttribute("focusable",!1),s.setAttribute("role","img"),e.height&&s.setAttribute("height",e.height),e.width&&s.setAttribute("width",e.width),e.parentNode.replaceChild(s,e)}},t.onerror=function(){e.classList.add("not-inline")},setTimeout(t.send(),0)}</script>
+
+  <div id="container">
+    <ul id="nav">
+      
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/banner/">
+            banner
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/blog-card/">
+            blog-card
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/blog-categories/">
+            blog-categories
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/bordered-panel/">
+            bordered-panel
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/box/">
+            box
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/button/">
+            button
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-avatar/">
+            character-avatar
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-callout/">
+            character-callout
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-hero/">
+            character-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/color-picker/">
+            color-picker
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/content-hero/">
+            content-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/design-callout/">
+            design-callout
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/footer/">
+            footer
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-dropdown/">
+            form-dropdown
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-label/">
+            form-label
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-success-message/">
+            form-success-message
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-text-input/">
+            form-text-input
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-title/">
+            form-title
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-toggle-input/">
+            form-toggle-input
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-toggle-input-group/">
+            form-toggle-input-group
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h2/">
+            h2
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h3/">
+            h3
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h4/">
+            h4
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="true" href="/_style-guide/header/">
+            header
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/home-hero/">
+            home-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/icon-button/">
+            icon-button
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/merchandise-banner/">
+            merchandise-banner
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/page-title/">
+            page-title
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/product/">
+            product
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/promo-code/">
+            promo-code
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/quantity-changer/">
+            quantity-changer
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/shop-hero/">
+            shop-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/size-picker/">
+            size-picker
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/social-icon/">
+            social-icon
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/svg/">
+            svg
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/swatches/">
+            swatches
+          </a>
+        </li>
+      
+    </ul>
+
+    <script>
+      document.querySelector('#nav a[aria-selected="true"]').scrollIntoView();
+    </script>
+
+    <div id="component">
+      
+
+
+<div id="vue-header" q-data='{"expandedSubMenus":{},"navigationIsExpanded":false}'>
+  <!-- <q> -->
+<template q-component="v-icon-button">
+  <component v-bind:class="[
+      styles.root,
+      styles.variant[variant]
+    ]" v-bind:href="href" v-bind:is="elem">
+    <v-svg v-bind:class="iconClassName" v-bind:name="iconName"></v-svg>
+
+    <span v-bind:class="[
+        styles.badge.base,
+        styles.badge.std,
+      ]" v-if="badge">
+      {{ badge }}
+    </span>
+    <span v-bind:class="[
+        styles.badge.base,
+        styles.badge.alt,
+      ]" v-if="badgeAlt">
+      {{ badgeAlt }}
+    </span>
+  </component>
+</template>
+<!-- </q> -->
+
+
+  
+
+<header class="display:flex flex-wrap:wrap justify-content:space-between padding:16px position:relative @mq-960--display:none">
+  <div class="">
+    
+
+<button class="group display:inline-block position:relative color:neutral-3a3a3d padding:8px :hocus--color:orange-ff583d" aria-controls="navigation" aria-haspopup="true" aria-label="Main navigation" ref="hamburger" v-bind:aria-expanded="String(navigationIsExpanded)" v-cloak v-on:click="toggleNavigation">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:28px" focusable="false">
+  <use xlink:href="#hamburger"/>
+</svg>
+
+
+  
+</button>
+
+
+  </div>
+
+  <v-icon-button aria-label="Shopping Cart" class="color:neutral-3a3a3d padding:8px :hocus--color:orange-ff583d" href="/cart" icon-class-name="
+      size:28px
+    " icon-name="cart" v-bind:badge="cartQuantity" v-bind:badge-alt="cartSubTotal"></v-icon-button>
+
+  <div class="margin-vertical:16px text-align:center width:100%">
+    <a aria-label="Home" class="position:relative text-align:center" href="/">
+      <img alt="Binaryville logo" class="max-width:100% size:logo-210x109px" src="/images/logo.svg">
+    </a>
+  </div>
+
+  <nav aria-labelledby="main-navigation-mobile-heading" class="background-color:neutral-000000A40 display:none pos-top-left-bottom-right:0 position:fixed z-index:100 is-expanded--display:block" ref="navigation" tabindex="-1" v-bind:class="navigationIsExpanded && states.isExpanded">
+    <h2 class="visually-hidden" id="main-navigation-mobile-heading">
+      Main navigation
+    </h2>
+    <div class="background-color:neutral-ffffff height:100% width:80%">
+      
+
+<button class="group display:inline-block position:relative color:neutral-3a3a3d padding:8px :hocus--color:orange-ff583d margin:16px" aria-controls="navigation" aria-haspopup="true" aria-label="Main navigation" ref="hamburger" v-bind:aria-expanded="String(navigationIsExpanded)" v-cloak v-on:click="toggleNavigation">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:28px" focusable="false">
+  <use xlink:href="#cross"/>
+</svg>
+
+
+  
+</button>
+
+
+      <div class="border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px"></div>
+      <ul class="font-size:18px height:100% overflow-y:auto position:relative">
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/about/">
+  <span class="display:inline-block">
+    About
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/shop/">
+  <span class="display:inline-block">
+    Shop
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/blog/">
+  <span class="display:inline-block">
+    Blog
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/contact/">
+  <span class="display:inline-block">
+    Contact
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/account/">
+  <span class="display:inline-block">
+    Account
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  
+
+<header class="border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px display:none padding-vertical:8px @mq-960--display:block">
+  
+  <div class="margin-horizontal:auto max-width:container padding-horizontal:32px">
+
+    <div class="align-items:center display:flex justify-content:center position:relative">
+      <a aria-label="Home" class="display:inline-block" href="/">
+        <img alt="Binaryville logo" class="size:logo-152x78px" src="/images/logo.svg">
+      </a>
+
+      <nav aria-labelledby="main-navigation-desktop-heading" class="display:flex margin-left:-12px pos-left:0 position:absolute">
+        <h2 class="visually-hidden" id="main-navigation-desktop-heading">
+          Main navigation
+        </h2>
+
+        <ul class="align-items:center display:flex">
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/about/">
+  About
+</a>
+
+            </li>
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/shop/">
+  Shop
+</a>
+
+            </li>
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/blog/">
+  Blog
+</a>
+
+            </li>
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/contact/">
+  Contact
+</a>
+
+            </li>
+          
+        </ul>
+      </nav>
+
+      <div class="align-items:center display:flex pos-right:0 position:absolute">
+        
+
+<a class="group display:inline-block position:relative color:neutral-3a3a3d margin-left:8px padding:8px :hocus--color:orange-ff583d" href="/account/" aria-label="Account">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:28px" focusable="false">
+  <use xlink:href="#bust"/>
+</svg>
+
+
+  
+</a>
+
+
+        <v-icon-button aria-label="Shopping Cart" class="color:neutral-3a3a3d margin-left:8px padding:8px :hocus--color:orange-ff583d" href="/cart" icon-class-name="
+      size:28px
+    " icon-name="cart" v-bind:badge="cartQuantity" v-bind:badge-alt="cartSubTotal"></v-icon-button>
+      </div>
+    </div>
+  </div>
+</header>
+
+</div>
+
+    </div>
+
+    <pre class="padding" id="props"></pre>
+  </div>
+
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.from"></script>
+  <script src="/assets/vendor.js?[object Object]"></script>
+  <script src="/assets/main.js?[object Object]"></script>
+</body>
+</html>

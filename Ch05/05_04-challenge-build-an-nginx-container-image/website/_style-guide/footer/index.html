@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>footer - Binaryville Styleguide</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  
+    <link rel="stylesheet" href="/assets/main.min.css?[object Object]">
+  
+  <style>
+    #container {
+      padding-top: 46px;
+    }
+
+    #nav {
+      background: #fff;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      position: fixed;
+      top: 0;
+      white-space: nowrap;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    #nav a {
+      display: inline-block;
+      color: #000;
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+
+    #nav a[aria-selected="true"] {
+      background: #eee;
+    }
+
+    #nav a:focus,
+    #nav a:hover {
+      background: #ddd;
+    }
+
+    #props {
+      font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
+      white-space: pre-wrap
+    }
+
+    .padding {
+      padding: 10px;
+    }
+
+    .swatch-title {
+      font-size: 1em;
+    }
+
+    .swatch-list {
+      border-radius: 5px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+      display: inline-flex;
+      flex-wrap: wrap;
+      list-style: none;
+      overflow: hidden;
+      margin: 0.5em 0 1em;
+    }
+
+    .swatch {
+      flex-shrink: 0;
+      height: 90px;
+      overflow: hidden;
+      position: relative;
+      width: 90px;
+    }
+
+    .swatch::after {
+      color: #fff;
+      content: attr(class);
+      font-size: 13px;
+      position: absolute;
+      right: 5px;
+      text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <script>!function(e,n,o){var i=e+"-svg",t=new XMLHttpRequest,s=document.body,a=document.createElement("div"),d=(o||window.location.protocol+"//"+window.location.hostname+(window.location.port?":"+window.location.port:""))+n,c=" no-svg";if(a.id=i,s.insertBefore(a,s.childNodes[0]),"withCredentials"in t)t.withCredentials,t.open("GET",d,!0);else{if("undefined"==typeof XDomainRequest)return s.className+=c;(t=new XDomainRequest).open("GET",d)}t.onload=function(){a.className="visually-hidden",a.innerHTML=t.responseText},t.onerror=function(){s.className+=c},setTimeout(t.send(),0)}("icons","/images/icons.svg")</script>
+  <script>function fetchSvgInline(e){var t=new XMLHttpRequest,i=e.currentSrc||e.src;if("withCredentials"in t)t.withCredentials,t.open("GET",i,!0);else{if("undefined"==typeof XDomainRequest)return;(t=new XDomainRequest).open("GET",i)}t.onload=function(){var i=t.responseText;if(-1!==i.indexOf("<svg")){var n=document.createElement("span");n.innerHTML=i;var s=n.getElementsByTagName("svg")[0];s.setAttribute("aria-label",e.alt||""),s.setAttribute("class",e.className),s.setAttribute("focusable",!1),s.setAttribute("role","img"),e.height&&s.setAttribute("height",e.height),e.width&&s.setAttribute("width",e.width),e.parentNode.replaceChild(s,e)}},t.onerror=function(){e.classList.add("not-inline")},setTimeout(t.send(),0)}</script>
+
+  <div id="container">
+    <ul id="nav">
+      
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/banner/">
+            banner
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/blog-card/">
+            blog-card
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/blog-categories/">
+            blog-categories
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/bordered-panel/">
+            bordered-panel
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/box/">
+            box
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/button/">
+            button
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-avatar/">
+            character-avatar
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-callout/">
+            character-callout
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-hero/">
+            character-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/color-picker/">
+            color-picker
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/content-hero/">
+            content-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/design-callout/">
+            design-callout
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="true" href="/_style-guide/footer/">
+            footer
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-dropdown/">
+            form-dropdown
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-label/">
+            form-label
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-success-message/">
+            form-success-message
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-text-input/">
+            form-text-input
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-title/">
+            form-title
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-toggle-input/">
+            form-toggle-input
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-toggle-input-group/">
+            form-toggle-input-group
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h2/">
+            h2
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h3/">
+            h3
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h4/">
+            h4
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/header/">
+            header
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/home-hero/">
+            home-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/icon-button/">
+            icon-button
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/merchandise-banner/">
+            merchandise-banner
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/page-title/">
+            page-title
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/product/">
+            product
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/promo-code/">
+            promo-code
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/quantity-changer/">
+            quantity-changer
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/shop-hero/">
+            shop-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/size-picker/">
+            size-picker
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/social-icon/">
+            social-icon
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/svg/">
+            svg
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/swatches/">
+            swatches
+          </a>
+        </li>
+      
+    </ul>
+
+    <script>
+      document.querySelector('#nav a[aria-selected="true"]').scrollIntoView();
+    </script>
+
+    <div id="component">
+      
+
+
+<footer class="background-color:blue-c5e6f9 color:blue-324f6b padding-horizontal:8px padding-vertical:32px @mq-800--padding-vertical:64px">
+  
+  <div class="margin-horizontal:auto max-width:container padding-horizontal:32px">
+
+    <h2 class="font-weight:500 font-size:28px line-height:1.142 margin-bottom:32px text-align:center @mq-800--font-size:36px @mq-800--font-weight:400 @mq-800--line-height:1.222 @mq-800--margin-bottom:48px">
+      Meet the Robots
+    </h2>
+
+    
+  <ul class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-16px margin-bottom:-32px justify-content:center margin-horizontal:-24px">
+
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/rex/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Rex" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/rex-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Rex
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/dolores/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Dolores" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/dolores-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Dolores
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/bubbles/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Bubbles" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/bubbles-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Bubbles
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/fred/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Fred" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/fred-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Fred
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/rivet/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Rivet" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/rivet-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Rivet
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/eileen/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Eileen" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/eileen-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Eileen
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/belle/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Belle" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/belle-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Belle
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/cosmo/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Cosmo" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/cosmo-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Cosmo
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/dolly/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Dolly" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/dolly-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Dolly
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/sergeant/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Sergeant" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/sergeant-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Sergeant
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/oscar/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Oscar" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/oscar-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Oscar
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/levi/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Levi" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/levi-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Levi
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/elton/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Elton" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/elton-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Elton
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/spring/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Spring" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/spring-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Spring
+  </span>
+</a>
+
+        </li>
+      
+    </ul>
+
+    <nav class="margin-horizontal:-48px">
+      <ul class="align-items:center display:inline-flex justify-content:center margin-vertical:32px margin-horizontal:auto flex-wrap:wrap width:100% @mq-800--padding-top:8px">
+        <li class="display:flex justify-content:center margin-bottom:32px width:100% @mq-800--margin-bottom:0 @mq-800--margin-horizontal:32px @mq-800--order:1 @mq-800--width:auto">
+          <a aria-label="Home" href="/">
+            <img class="" alt="Binaryville logo" height="88" src="/images/logo.svg" width="170">
+          </a>
+        </li>
+        <li>
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/about/">
+            About
+          </a>
+        </li>
+        <li>
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/blog/">
+            Blog
+          </a>
+        </li>
+        <li class="@mq-800--order:1">
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/contact/">
+            Contact
+          </a>
+        </li>
+        <li class="@mq-800--order:1">
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/shop">
+            Shop
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <h3 class="visually-hidden">
+      Follow us
+    </h3>
+    
+  <ul class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-8px margin-bottom:-16px justify-content:center margin-bottom:24px">
+
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on facebook" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://www.facebook.com/binaryville/">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#facebook"/>
+</svg>
+
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on twitter" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://twitter.com/binaryville">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#twitter"/>
+</svg>
+
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on instagram" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://www.instagram.com/binaryville/">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#instagram"/>
+</svg>
+
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on linkedin" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://www.linkedin.com/company/binaryville">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#linkedin"/>
+</svg>
+
+</a>
+
+        </li>
+      
+    </ul>
+
+    <p class="border-top-style:solid border-top-width:2px font-size:12px letter-spacing:0.33 line-height:1.5 padding-top:24px @mq-800--font-size:14px @mq-800--line-height:1.285 @mq-800--margin-horizontal:64px @mq-800--padding-horizontal:32px @mq-800--text-align:center">
+      This is a fictitious company created by LinkedIn Corporation, or its affiliates, solely for the creation and development of educational training materials. Any resemblance to real products or services is purely coincidental. Information provided about the products or services is also fictitious and should not be construed as representative of actual products or services on the market in a similar product or service category.
+    </p>
+  </div>
+</footer>
+
+    </div>
+
+    <pre class="padding" id="props"></pre>
+  </div>
+
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.from"></script>
+  <script src="/assets/vendor.js?[object Object]"></script>
+  <script src="/assets/main.js?[object Object]"></script>
+</body>
+</html>

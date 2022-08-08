@@ -1,0 +1,2214 @@
+<!doctype html>
+<html class="overflow-x:hidden" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Checkout - Binaryville</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  
+    <link rel="stylesheet" href="/assets/main.min.css?4a368bd4242c04b985f2dcf94f8d196d">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+</head>
+<body>
+  <script>!function(e,n,o){var i=e+"-svg",t=new XMLHttpRequest,s=document.body,a=document.createElement("div"),d=(o||window.location.protocol+"//"+window.location.hostname+(window.location.port?":"+window.location.port:""))+n,c=" no-svg";if(a.id=i,s.insertBefore(a,s.childNodes[0]),"withCredentials"in t)t.withCredentials,t.open("GET",d,!0);else{if("undefined"==typeof XDomainRequest)return s.className+=c;(t=new XDomainRequest).open("GET",d)}t.onload=function(){a.className="visually-hidden",a.innerHTML=t.responseText},t.onerror=function(){s.className+=c},setTimeout(t.send(),0)}("icons","/images/icons.svg?05bcceb46e51bbafbc3992edb9ff5dae")</script>
+  <script>function fetchSvgInline(e){var t=new XMLHttpRequest,i=e.currentSrc||e.src;if("withCredentials"in t)t.withCredentials,t.open("GET",i,!0);else{if("undefined"==typeof XDomainRequest)return;(t=new XDomainRequest).open("GET",i)}t.onload=function(){var i=t.responseText;if(-1!==i.indexOf("<svg")){var n=document.createElement("span");n.innerHTML=i;var s=n.getElementsByTagName("svg")[0];s.setAttribute("aria-label",e.alt||""),s.setAttribute("class",e.className),s.setAttribute("focusable",!1),s.setAttribute("role","img"),e.height&&s.setAttribute("height",e.height),e.width&&s.setAttribute("width",e.width),e.parentNode.replaceChild(s,e)}},t.onerror=function(){e.classList.add("not-inline")},setTimeout(t.send(),0)}</script>
+
+
+
+
+<div id="vue-header" q-data='{"expandedSubMenus":{},"navigationIsExpanded":false}'>
+  <!-- <q> -->
+<template q-component="v-icon-button">
+  <component v-bind:class="[
+      styles.root,
+      styles.variant[variant]
+    ]" v-bind:href="href" v-bind:is="elem">
+    <v-svg v-bind:class="iconClassName" v-bind:name="iconName"></v-svg>
+
+    <span v-bind:class="[
+        styles.badge.base,
+        styles.badge.std,
+      ]" v-if="badge">
+      {{ badge }}
+    </span>
+    <span v-bind:class="[
+        styles.badge.base,
+        styles.badge.alt,
+      ]" v-if="badgeAlt">
+      {{ badgeAlt }}
+    </span>
+  </component>
+</template>
+<!-- </q> -->
+
+
+  
+
+<header class="display:flex flex-wrap:wrap justify-content:space-between padding:16px position:relative @mq-960--display:none">
+  <div class="">
+    
+
+<button class="group display:inline-block position:relative color:neutral-3a3a3d padding:8px :hocus--color:orange-ff583d" aria-controls="navigation" aria-haspopup="true" aria-label="Main navigation" ref="hamburger" v-bind:aria-expanded="String(navigationIsExpanded)" v-cloak v-on:click="toggleNavigation">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:28px" focusable="false">
+  <use xlink:href="#hamburger"/>
+</svg>
+
+
+  
+</button>
+
+
+  </div>
+
+  <v-icon-button aria-label="Shopping Cart" class="color:neutral-3a3a3d padding:8px :hocus--color:orange-ff583d" href="/cart" icon-class-name="
+      size:28px
+    " icon-name="cart" v-bind:badge="cartQuantity" v-bind:badge-alt="cartSubTotal"></v-icon-button>
+
+  <div class="margin-vertical:16px text-align:center width:100%">
+    <a aria-label="Home" class="position:relative text-align:center" href="/">
+      <img alt="Binaryville logo" class="max-width:100% size:logo-210x109px" src="/images/logo.svg">
+    </a>
+  </div>
+
+  <nav aria-labelledby="main-navigation-mobile-heading" class="background-color:neutral-000000A40 display:none pos-top-left-bottom-right:0 position:fixed z-index:100 is-expanded--display:block" ref="navigation" tabindex="-1" v-bind:class="navigationIsExpanded && states.isExpanded">
+    <h2 class="visually-hidden" id="main-navigation-mobile-heading">
+      Main navigation
+    </h2>
+    <div class="background-color:neutral-ffffff height:100% width:80%">
+      
+
+<button class="group display:inline-block position:relative color:neutral-3a3a3d padding:8px :hocus--color:orange-ff583d margin:16px" aria-controls="navigation" aria-haspopup="true" aria-label="Main navigation" ref="hamburger" v-bind:aria-expanded="String(navigationIsExpanded)" v-cloak v-on:click="toggleNavigation">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:28px" focusable="false">
+  <use xlink:href="#cross"/>
+</svg>
+
+
+  
+</button>
+
+
+      <div class="border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px"></div>
+      <ul class="font-size:18px height:100% overflow-y:auto position:relative">
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/about/">
+  <span class="display:inline-block">
+    About
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/shop/">
+  <span class="display:inline-block">
+    Shop
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/blog/">
+  <span class="display:inline-block">
+    Blog
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/contact/">
+  <span class="display:inline-block">
+    Contact
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+          <li class="group border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px">
+            
+
+<a class="group align-items:center color:neutral-3a3a3d display:flex font-weight:500 justify-content:space-between padding-horizontal:24px padding-vertical:16px white-space:no-wrap width:100% :hocus--color:orange-ff583d is-selected--color:orange-ff583d" href="/account/">
+  <span class="display:inline-block">
+    Account
+  </span>
+
+  
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:0x24px display:none" focusable="false">
+  <use xlink:href="#spacer"/>
+</svg>
+
+  
+</a>
+
+
+
+            
+          </li>
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  
+
+<header class="border-bottom-color:neutral-000000 border-bottom-style:solid border-bottom-width:1px display:none padding-vertical:8px @mq-960--display:block">
+  
+  <div class="margin-horizontal:auto max-width:container padding-horizontal:32px">
+
+    <div class="align-items:center display:flex justify-content:center position:relative">
+      <a aria-label="Home" class="display:inline-block" href="/">
+        <img alt="Binaryville logo" class="size:logo-152x78px" src="/images/logo.svg">
+      </a>
+
+      <nav aria-labelledby="main-navigation-desktop-heading" class="display:flex margin-left:-12px pos-left:0 position:absolute">
+        <h2 class="visually-hidden" id="main-navigation-desktop-heading">
+          Main navigation
+        </h2>
+
+        <ul class="align-items:center display:flex">
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/about/">
+  About
+</a>
+
+            </li>
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/shop/">
+  Shop
+</a>
+
+            </li>
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/blog/">
+  Blog
+</a>
+
+            </li>
+          
+            <li class="margin-right:8px">
+              
+
+<a class="color:neutral-3a3a3d font-weight:500 font-size:18px padding:12px :hocus--color:orange-ff583d :hocus--text-decoration:underline is-selected--color:orange-ff583d is-selected--text-decoration:underline" href="/contact/">
+  Contact
+</a>
+
+            </li>
+          
+        </ul>
+      </nav>
+
+      <div class="align-items:center display:flex pos-right:0 position:absolute">
+        
+
+<a class="group display:inline-block position:relative color:neutral-3a3a3d margin-left:8px padding:8px :hocus--color:orange-ff583d" href="/account/" aria-label="Account">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:28px" focusable="false">
+  <use xlink:href="#bust"/>
+</svg>
+
+
+  
+</a>
+
+
+        <v-icon-button aria-label="Shopping Cart" class="color:neutral-3a3a3d margin-left:8px padding:8px :hocus--color:orange-ff583d" href="/cart" icon-class-name="
+      size:28px
+    " icon-name="cart" v-bind:badge="cartQuantity" v-bind:badge-alt="cartSubTotal"></v-icon-button>
+      </div>
+    </div>
+  </div>
+</header>
+
+</div>
+
+
+
+
+<div id="vue-checkout">
+  <form v-bind:novalidate="!validateForm" v-on:submit.prevent="submitOrder">
+    <!-- <q> -->
+<template q-component="v-promo-code">
+  <strong class="display:flex line-height:1_083 margin-vertical:4px" v-bind:class="valid ? 'color:green-459482' : 'color:red-d02619'">
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom margin-right:2px size:16px" focusable="false">
+  <use xlink:href="#tag"/>
+</svg>
+
+    {{ content }}
+
+    
+
+<button class="group display:inline-block position:relative background-color:neutral-979797 border-radius:1000 :hocus--background-color:orange-ff583d margin-left:4px size:16px" aria-label="Remove promo code" v-if="removable" v-on:click="$emit('remove-promo-code')">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom color:neutral-ffffff size:16px" focusable="false">
+  <use xlink:href="#cross-small"/>
+</svg>
+
+
+  
+</button>
+
+  </strong>
+</template>
+<!-- </q> -->
+
+    
+  <main class="margin-horizontal:auto max-width:container padding-horizontal:32px">
+
+      <div class="display:flex align-items:center flex-wrap:wrap justify-content:space-between margin-bottom:12px margin-top:24px">
+        
+
+<h1 class="color:blue-265f8e font-size:36px font-weight:500 line-height:1.222 margin-right:12px">
+  Checkout
+</h1>
+
+
+        <div>
+          
+
+<button class="display:inline-block font-size:18px font-weight:700 line-height:1 padding-horizontal:24px padding-vertical:12px background-color:orange-ff583d color:neutral-222224 :hocus--background-color:yellow-f0c808 @mq-768--display:none">
+  Place Order
+</button>
+
+        </div>
+      </div>
+
+      <div class="margin-bottom:24px @mq-768--margin-bottom:32px @mq-960--margin-bottom:48px">
+        
+  <div class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-12px margin-bottom:-24px @mq-768--margin-horizontal:-16px @mq-768--margin-bottom:-32px @mq-960--margin-horizontal:-24px @mq-960--margin-bottom:-48px">
+
+          
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px @mq-768--margin-bottom:32px @mq-768--padding-horizontal:16px @mq-960--margin-bottom:48px @mq-960--padding-horizontal:24px width:100% @mq-768--width:60%">
+
+            
+  <fieldset class="background-color:blue-dcf0fb padding:32px margin-bottom:16px">
+
+              
+
+<legend class="visually-hidden">
+  Contact Information
+</legend>
+
+
+
+<h4 class="color:blue-2c3d57 font-size:20px font-weight:500 @mq-800--font-size:24px color:blue-265f8e margin-bottom:16px margin-top:-8px" aria-hidden="true">
+  Contact Information
+</h4>
+
+
+
+              
+
+
+  
+  <div class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-12px margin-bottom:-24px">
+
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="contact-information-email-address">
+  Email address
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="contact-information-email-address" name="contact-information-email-address" placeholder="" required type="email" value="" v-model="customer['contact-information-email-address']">
+  
+</div>
+
+        </div>
+      
+    
+  </div>
+
+
+            </fieldset>
+
+            
+  <div class="background-color:blue-dcf0fb padding:32px margin-bottom:16px">
+
+              <fieldset class="border-bottom-color:blue-2c3d57 border-bottom-style:solid border-bottom-width:1px padding-bottom:24px margin-bottom:24px">
+                
+
+<legend class="visually-hidden">
+  Shipping Address
+</legend>
+
+
+
+<h4 class="color:blue-2c3d57 font-size:20px font-weight:500 @mq-800--font-size:24px color:blue-265f8e margin-bottom:16px margin-top:-8px" aria-hidden="true">
+  Shipping Address
+</h4>
+
+
+
+                
+
+
+  
+  <div class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-12px margin-bottom:-24px">
+
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="shipping-address-first-name">
+  First name
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="shipping-address-first-name" name="shipping-address-first-name" placeholder="" required type="text" value="" v-model="customer['shipping-address-first-name']">
+  
+</div>
+
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="shipping-address-last-name">
+  Last name
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="shipping-address-last-name" name="shipping-address-last-name" placeholder="" required type="text" value="" v-model="customer['shipping-address-last-name']">
+  
+</div>
+
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="shipping-address-address">
+  Address
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="shipping-address-address" name="shipping-address-address" placeholder="" required type="text" value="" v-model="customer['shipping-address-address']">
+  
+</div>
+
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="shipping-address-apt-suite-optional">
+  Apt/Suite (Optional)
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="shipping-address-apt-suite-optional" name="shipping-address-apt-suite-optional" placeholder="" type="text" value="" v-model="customer['shipping-address-apt-suite-optional']">
+  
+</div>
+
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 width:100%">
+
+          
+  <div class="display:flex flex-grow:1 flex-wrap:wrap">
+
+            
+              
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100% @mq-1100--width:50%">
+
+                
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="shipping-address-city">
+  City
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="shipping-address-city" name="shipping-address-city" placeholder="" required type="text" value="" v-model="customer['shipping-address-city']">
+  
+</div>
+
+              </div>
+            
+              
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:50% @mq-1100--width:30%">
+
+                
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="shipping-address-state">
+  State
+</label>
+
+
+<div class="position:relative">
+  <select class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 line-height:1 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="shipping-address-state" name="shipping-address-state" required v-model="customer['shipping-address-state']">
+    
+      <option value="">
+        
+      </option>
+    
+      <option value="Alabama">
+        Alabama
+      </option>
+    
+      <option value="Alaska">
+        Alaska
+      </option>
+    
+      <option value="American Samoa">
+        American Samoa
+      </option>
+    
+      <option value="Arizona">
+        Arizona
+      </option>
+    
+      <option value="Arkansas">
+        Arkansas
+      </option>
+    
+      <option value="California">
+        California
+      </option>
+    
+      <option value="Colorado">
+        Colorado
+      </option>
+    
+      <option value="Connecticut">
+        Connecticut
+      </option>
+    
+      <option value="Delaware">
+        Delaware
+      </option>
+    
+      <option value="District of Columbia">
+        District of Columbia
+      </option>
+    
+      <option value="Federated States of Micronesia">
+        Federated States of Micronesia
+      </option>
+    
+      <option value="Florida">
+        Florida
+      </option>
+    
+      <option value="Georgia">
+        Georgia
+      </option>
+    
+      <option value="Guam">
+        Guam
+      </option>
+    
+      <option value="Hawaii">
+        Hawaii
+      </option>
+    
+      <option value="Idaho">
+        Idaho
+      </option>
+    
+      <option value="Illinois">
+        Illinois
+      </option>
+    
+      <option value="Indiana">
+        Indiana
+      </option>
+    
+      <option value="Iowa">
+        Iowa
+      </option>
+    
+      <option value="Kansas">
+        Kansas
+      </option>
+    
+      <option value="Kentucky">
+        Kentucky
+      </option>
+    
+      <option value="Louisiana">
+        Louisiana
+      </option>
+    
+      <option value="Maine">
+        Maine
+      </option>
+    
+      <option value="Marshall Islands">
+        Marshall Islands
+      </option>
+    
+      <option value="Maryland">
+        Maryland
+      </option>
+    
+      <option value="Massachusetts">
+        Massachusetts
+      </option>
+    
+      <option value="Michigan">
+        Michigan
+      </option>
+    
+      <option value="Minnesota">
+        Minnesota
+      </option>
+    
+      <option value="Mississippi">
+        Mississippi
+      </option>
+    
+      <option value="Missouri">
+        Missouri
+      </option>
+    
+      <option value="Montana">
+        Montana
+      </option>
+    
+      <option value="Nebraska">
+        Nebraska
+      </option>
+    
+      <option value="Nevada">
+        Nevada
+      </option>
+    
+      <option value="New Hampshire">
+        New Hampshire
+      </option>
+    
+      <option value="New Jersey">
+        New Jersey
+      </option>
+    
+      <option value="New Mexico">
+        New Mexico
+      </option>
+    
+      <option value="New York">
+        New York
+      </option>
+    
+      <option value="North Carolina">
+        North Carolina
+      </option>
+    
+      <option value="North Dakota">
+        North Dakota
+      </option>
+    
+      <option value="Northern Mariana Islands">
+        Northern Mariana Islands
+      </option>
+    
+      <option value="Ohio">
+        Ohio
+      </option>
+    
+      <option value="Oklahoma">
+        Oklahoma
+      </option>
+    
+      <option value="Oregon">
+        Oregon
+      </option>
+    
+      <option value="Palau">
+        Palau
+      </option>
+    
+      <option value="Pennsylvania">
+        Pennsylvania
+      </option>
+    
+      <option value="Puerto Rico">
+        Puerto Rico
+      </option>
+    
+      <option value="Rhode Island">
+        Rhode Island
+      </option>
+    
+      <option value="South Carolina">
+        South Carolina
+      </option>
+    
+      <option value="South Dakota">
+        South Dakota
+      </option>
+    
+      <option value="Tennessee">
+        Tennessee
+      </option>
+    
+      <option value="Texas">
+        Texas
+      </option>
+    
+      <option value="Utah">
+        Utah
+      </option>
+    
+      <option value="Vermont">
+        Vermont
+      </option>
+    
+      <option value="Virgin Island">
+        Virgin Island
+      </option>
+    
+      <option value="Virginia">
+        Virginia
+      </option>
+    
+      <option value="Washington">
+        Washington
+      </option>
+    
+      <option value="West Virginia">
+        West Virginia
+      </option>
+    
+      <option value="Wisconsin">
+        Wisconsin
+      </option>
+    
+      <option value="Wyoming">
+        Wyoming
+      </option>
+    
+  </select>
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom background-color:neutral-ffffff margin-right:2px position:absolute pos-right:0 pos-top:50% size:24px translate-y:-50%" focusable="false">
+  <use xlink:href="#dropdown-caret"/>
+</svg>
+
+</div>
+
+              </div>
+            
+              
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:50% @mq-1100--width:20%">
+
+                
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="shipping-address-zip-code">
+  Zip Code
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="shipping-address-zip-code" name="shipping-address-zip-code" placeholder="" required type="text" value="" v-model="customer['shipping-address-zip-code']">
+  
+</div>
+
+              </div>
+            
+          </div>
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="shipping-address-phone">
+  Phone
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="shipping-address-phone" name="shipping-address-phone" placeholder="" type="tel" value="" v-model="customer['shipping-address-phone']">
+  
+</div>
+
+        </div>
+      
+    
+  </div>
+
+
+              </fieldset>
+
+              <fieldset>
+                
+
+<legend class="visually-hidden">
+  Shipping Method
+</legend>
+
+
+
+<h4 class="color:blue-2c3d57 font-size:20px font-weight:500 @mq-800--font-size:24px color:blue-265f8e margin-bottom:16px margin-top:-8px" aria-hidden="true">
+  Shipping Method
+</h4>
+
+
+
+                
+
+
+  <div class="">
+
+
+  
+    
+
+<label class="color:neutral-3a3a3d display:flex position:relative margin-top:16px">
+  <input class="appearance:none position:absolute size:18px toggle-input:checked-target--opacity:100" name="shipping-cost" required type="radio" value="8" v-bind:value="qualifiesForFreeShipping ? '0' : '8'" v-model.number="customer['shipping-cost']">
+  <span class="background-color:neutral-ffffff border-color:blue-265f8e border-style:solid border-width:1px display:inline-block flex-shrink:0 margin-right:12px overflow:hidden position:relative size:18px border-radius:1000">
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom background-color:neutral-3a3a3d color:neutral-ffffff height:100% opacity:0 pos-top-left:0 position:absolute transition-easing:ease transition-duration:200 transition-property:opacity width:100%" focusable="false">
+  <use xlink:href="#toggle-radio"/>
+</svg>
+
+  </span>
+  <span v-html="freeShippingOptionHtml">
+    <b>Standard</b> | $8.00<br>3 – 7 Business Days
+  </span>
+</label>
+
+  
+    
+
+<label class="color:neutral-3a3a3d display:flex position:relative margin-top:16px">
+  <input class="appearance:none position:absolute size:18px toggle-input:checked-target--opacity:100" name="shipping-cost" required type="radio" value="16" v-model.number="customer['shipping-cost']">
+  <span class="background-color:neutral-ffffff border-color:blue-265f8e border-style:solid border-width:1px display:inline-block flex-shrink:0 margin-right:12px overflow:hidden position:relative size:18px border-radius:1000">
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom background-color:neutral-3a3a3d color:neutral-ffffff height:100% opacity:0 pos-top-left:0 position:absolute transition-easing:ease transition-duration:200 transition-property:opacity width:100%" focusable="false">
+  <use xlink:href="#toggle-radio"/>
+</svg>
+
+  </span>
+  <span>
+    <b>Fast</b> | $16.00<br>2 – 3 Business Days
+  </span>
+</label>
+
+  
+    
+
+<label class="color:neutral-3a3a3d display:flex position:relative margin-top:16px">
+  <input class="appearance:none position:absolute size:18px toggle-input:checked-target--opacity:100" name="shipping-cost" required type="radio" value="22" v-model.number="customer['shipping-cost']">
+  <span class="background-color:neutral-ffffff border-color:blue-265f8e border-style:solid border-width:1px display:inline-block flex-shrink:0 margin-right:12px overflow:hidden position:relative size:18px border-radius:1000">
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom background-color:neutral-3a3a3d color:neutral-ffffff height:100% opacity:0 pos-top-left:0 position:absolute transition-easing:ease transition-duration:200 transition-property:opacity width:100%" focusable="false">
+  <use xlink:href="#toggle-radio"/>
+</svg>
+
+  </span>
+  <span>
+    <b>Express</b> | $22.00<br>1 — 2 Business Days
+  </span>
+</label>
+
+  
+
+
+  </div>
+
+
+              </fieldset>
+            </div>
+
+            
+  <div class="background-color:blue-dcf0fb padding:32px margin-bottom:16px">
+
+              <fieldset class="border-bottom-color:blue-2c3d57 border-bottom-style:solid border-bottom-width:1px padding-bottom:24px margin-bottom:24px">
+                <div class="color:blue-265f8e margin-bottom:16px margin-top:-8px align-items:center display:flex flex-wrap:wrap justify-content:space-between">
+                  
+
+<legend class="visually-hidden">
+  Payment Method
+</legend>
+
+
+
+<h4 class="color:blue-2c3d57 font-size:20px font-weight:500 @mq-800--font-size:24px" aria-hidden="true">
+  Payment Method
+</h4>
+
+
+
+                  <div class="align-items:center display:flex flex-wrap:wrap">
+                    <p class="color:neutral-000000 font-size:14px margin-right:12px text-transform:uppercase">
+                      We Accept:
+                    </p>
+                    <img alt="VISA, Mastercase, American Express, Diners" height="28" src="/images/accepted-cards.svg">
+                  </div>
+                </div>
+
+                
+
+
+  
+  <div class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-12px margin-bottom:-24px">
+
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="payment-method-card-number">
+  Card Number
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="payment-method-card-number" name="payment-method-card-number" placeholder="" required type="tel" value="" v-model="customer['payment-method-card-number']" minlength="13" maxlength="19" pattern="\d{13,19}">
+  
+</div>
+
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="payment-method-name-on-card">
+  Name on Card
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="payment-method-name-on-card" name="payment-method-name-on-card" placeholder="" required type="text" value="" v-model="customer['payment-method-name-on-card']">
+  
+</div>
+
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 width:100%">
+
+          
+  <div class="display:flex flex-grow:1 flex-wrap:wrap">
+
+            
+              
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:50% @mq-1100--width:33.3%">
+
+                
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="payment-method-expiration-month">
+  Expiration Month
+</label>
+
+
+<div class="position:relative">
+  <select class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 line-height:1 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="payment-method-expiration-month" name="payment-method-expiration-month" required v-model="customer['payment-method-expiration-month']">
+    
+      <option value="">
+        
+      </option>
+    
+      <option value="01">
+        01
+      </option>
+    
+      <option value="02">
+        02
+      </option>
+    
+      <option value="03">
+        03
+      </option>
+    
+      <option value="04">
+        04
+      </option>
+    
+      <option value="05">
+        05
+      </option>
+    
+      <option value="06">
+        06
+      </option>
+    
+      <option value="07">
+        07
+      </option>
+    
+      <option value="08">
+        08
+      </option>
+    
+      <option value="09">
+        09
+      </option>
+    
+      <option value="10">
+        10
+      </option>
+    
+      <option value="11">
+        11
+      </option>
+    
+      <option value="12">
+        12
+      </option>
+    
+  </select>
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom background-color:neutral-ffffff margin-right:2px position:absolute pos-right:0 pos-top:50% size:24px translate-y:-50%" focusable="false">
+  <use xlink:href="#dropdown-caret"/>
+</svg>
+
+</div>
+
+              </div>
+            
+              
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:50% @mq-1100--width:33.3%">
+
+                
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="payment-method-expiration-year">
+  Expiration Year
+</label>
+
+
+<div class="position:relative">
+  <select class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 line-height:1 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="payment-method-expiration-year" name="payment-method-expiration-year" required v-model="customer['payment-method-expiration-year']">
+    
+      <option value="">
+        
+      </option>
+    
+      <option value="2020">
+        2020
+      </option>
+    
+      <option value="2021">
+        2021
+      </option>
+    
+      <option value="2022">
+        2022
+      </option>
+    
+      <option value="2023">
+        2023
+      </option>
+    
+      <option value="2024">
+        2024
+      </option>
+    
+      <option value="2025">
+        2025
+      </option>
+    
+      <option value="2026">
+        2026
+      </option>
+    
+      <option value="2027">
+        2027
+      </option>
+    
+      <option value="2028">
+        2028
+      </option>
+    
+      <option value="2029">
+        2029
+      </option>
+    
+      <option value="2030">
+        2030
+      </option>
+    
+  </select>
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom background-color:neutral-ffffff margin-right:2px position:absolute pos-right:0 pos-top:50% size:24px translate-y:-50%" focusable="false">
+  <use xlink:href="#dropdown-caret"/>
+</svg>
+
+</div>
+
+              </div>
+            
+              
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:50% @mq-1100--width:33.3%">
+
+                
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="payment-method-security-code">
+  Security Code
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="payment-method-security-code" name="payment-method-security-code" placeholder="" required type="tel" value="" v-model="customer['payment-method-security-code']" minlength="3" maxlength="4" pattern="\d{3,4}">
+  
+</div>
+
+              </div>
+            
+          </div>
+        </div>
+      
+    
+  </div>
+
+
+              </fieldset>
+
+              <fieldset>
+                
+
+<legend class="visually-hidden">
+  Billing Address
+</legend>
+
+
+
+<h4 class="color:blue-2c3d57 font-size:20px font-weight:500 @mq-800--font-size:24px color:blue-265f8e margin-bottom:16px margin-top:-8px" aria-hidden="true">
+  Billing Address
+</h4>
+
+
+
+                
+
+<label class="color:neutral-3a3a3d display:flex position:relative margin-bottom:24px">
+  <input class="appearance:none position:absolute size:18px toggle-input:checked-target--opacity:100" name="billing-equals-shipping" type="checkbox" value="Billing address the same as shipping address" v-model="customer['billing-equals-shipping']" v-on:click="handleBillingAddressToggle">
+  <span class="background-color:neutral-ffffff border-color:blue-265f8e border-style:solid border-width:1px display:inline-block flex-shrink:0 margin-right:12px overflow:hidden position:relative size:18px">
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom background-color:neutral-3a3a3d color:neutral-ffffff height:100% opacity:0 pos-top-left:0 position:absolute transition-easing:ease transition-duration:200 transition-property:opacity width:100%" focusable="false">
+  <use xlink:href="#toggle-check"/>
+</svg>
+
+  </span>
+  <span>
+    Billing address the same as shipping address
+  </span>
+</label>
+
+
+                <div v-show="!customer['billing-equals-shipping']">
+                  
+
+
+  
+  <div class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-12px margin-bottom:-24px">
+
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="billing-address-first-name">
+  First name
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="billing-address-first-name" name="billing-address-first-name" placeholder="" type="text" value="" v-model="customer['billing-address-first-name']" v-bind:required="!customer['billing-equals-shipping']">
+  
+</div>
+
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="billing-address-last-name">
+  Last name
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="billing-address-last-name" name="billing-address-last-name" placeholder="" type="text" value="" v-model="customer['billing-address-last-name']" v-bind:required="!customer['billing-equals-shipping']">
+  
+</div>
+
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="billing-address-address">
+  Address
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="billing-address-address" name="billing-address-address" placeholder="" type="text" value="" v-model="customer['billing-address-address']" v-bind:required="!customer['billing-equals-shipping']">
+  
+</div>
+
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="billing-address-apt-suite-optional">
+  Apt/Suite (Optional)
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="billing-address-apt-suite-optional" name="billing-address-apt-suite-optional" placeholder="" type="text" value="" v-model="customer['billing-address-apt-suite-optional']">
+  
+</div>
+
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 width:100%">
+
+          
+  <div class="display:flex flex-grow:1 flex-wrap:wrap">
+
+            
+              
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100% @mq-1100--width:50%">
+
+                
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="billing-address-city">
+  City
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="billing-address-city" name="billing-address-city" placeholder="" type="text" value="" v-model="customer['billing-address-city']" v-bind:required="!customer['billing-equals-shipping']">
+  
+</div>
+
+              </div>
+            
+              
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:50% @mq-1100--width:30%">
+
+                
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="billing-address-state">
+  State
+</label>
+
+
+<div class="position:relative">
+  <select class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 line-height:1 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="billing-address-state" name="billing-address-state" v-model="customer['billing-address-state']" v-bind:required="!customer['billing-equals-shipping']">
+    
+      <option value="">
+        
+      </option>
+    
+      <option value="Alabama">
+        Alabama
+      </option>
+    
+      <option value="Alaska">
+        Alaska
+      </option>
+    
+      <option value="American Samoa">
+        American Samoa
+      </option>
+    
+      <option value="Arizona">
+        Arizona
+      </option>
+    
+      <option value="Arkansas">
+        Arkansas
+      </option>
+    
+      <option value="California">
+        California
+      </option>
+    
+      <option value="Colorado">
+        Colorado
+      </option>
+    
+      <option value="Connecticut">
+        Connecticut
+      </option>
+    
+      <option value="Delaware">
+        Delaware
+      </option>
+    
+      <option value="District of Columbia">
+        District of Columbia
+      </option>
+    
+      <option value="Federated States of Micronesia">
+        Federated States of Micronesia
+      </option>
+    
+      <option value="Florida">
+        Florida
+      </option>
+    
+      <option value="Georgia">
+        Georgia
+      </option>
+    
+      <option value="Guam">
+        Guam
+      </option>
+    
+      <option value="Hawaii">
+        Hawaii
+      </option>
+    
+      <option value="Idaho">
+        Idaho
+      </option>
+    
+      <option value="Illinois">
+        Illinois
+      </option>
+    
+      <option value="Indiana">
+        Indiana
+      </option>
+    
+      <option value="Iowa">
+        Iowa
+      </option>
+    
+      <option value="Kansas">
+        Kansas
+      </option>
+    
+      <option value="Kentucky">
+        Kentucky
+      </option>
+    
+      <option value="Louisiana">
+        Louisiana
+      </option>
+    
+      <option value="Maine">
+        Maine
+      </option>
+    
+      <option value="Marshall Islands">
+        Marshall Islands
+      </option>
+    
+      <option value="Maryland">
+        Maryland
+      </option>
+    
+      <option value="Massachusetts">
+        Massachusetts
+      </option>
+    
+      <option value="Michigan">
+        Michigan
+      </option>
+    
+      <option value="Minnesota">
+        Minnesota
+      </option>
+    
+      <option value="Mississippi">
+        Mississippi
+      </option>
+    
+      <option value="Missouri">
+        Missouri
+      </option>
+    
+      <option value="Montana">
+        Montana
+      </option>
+    
+      <option value="Nebraska">
+        Nebraska
+      </option>
+    
+      <option value="Nevada">
+        Nevada
+      </option>
+    
+      <option value="New Hampshire">
+        New Hampshire
+      </option>
+    
+      <option value="New Jersey">
+        New Jersey
+      </option>
+    
+      <option value="New Mexico">
+        New Mexico
+      </option>
+    
+      <option value="New York">
+        New York
+      </option>
+    
+      <option value="North Carolina">
+        North Carolina
+      </option>
+    
+      <option value="North Dakota">
+        North Dakota
+      </option>
+    
+      <option value="Northern Mariana Islands">
+        Northern Mariana Islands
+      </option>
+    
+      <option value="Ohio">
+        Ohio
+      </option>
+    
+      <option value="Oklahoma">
+        Oklahoma
+      </option>
+    
+      <option value="Oregon">
+        Oregon
+      </option>
+    
+      <option value="Palau">
+        Palau
+      </option>
+    
+      <option value="Pennsylvania">
+        Pennsylvania
+      </option>
+    
+      <option value="Puerto Rico">
+        Puerto Rico
+      </option>
+    
+      <option value="Rhode Island">
+        Rhode Island
+      </option>
+    
+      <option value="South Carolina">
+        South Carolina
+      </option>
+    
+      <option value="South Dakota">
+        South Dakota
+      </option>
+    
+      <option value="Tennessee">
+        Tennessee
+      </option>
+    
+      <option value="Texas">
+        Texas
+      </option>
+    
+      <option value="Utah">
+        Utah
+      </option>
+    
+      <option value="Vermont">
+        Vermont
+      </option>
+    
+      <option value="Virgin Island">
+        Virgin Island
+      </option>
+    
+      <option value="Virginia">
+        Virginia
+      </option>
+    
+      <option value="Washington">
+        Washington
+      </option>
+    
+      <option value="West Virginia">
+        West Virginia
+      </option>
+    
+      <option value="Wisconsin">
+        Wisconsin
+      </option>
+    
+      <option value="Wyoming">
+        Wyoming
+      </option>
+    
+  </select>
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom background-color:neutral-ffffff margin-right:2px position:absolute pos-right:0 pos-top:50% size:24px translate-y:-50%" focusable="false">
+  <use xlink:href="#dropdown-caret"/>
+</svg>
+
+</div>
+
+              </div>
+            
+              
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:50% @mq-1100--width:20%">
+
+                
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="billing-address-zip-code">
+  Zip Code
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="billing-address-zip-code" name="billing-address-zip-code" placeholder="" type="text" value="" v-model="customer['billing-address-zip-code']" v-bind:required="!customer['billing-equals-shipping']">
+  
+</div>
+
+              </div>
+            
+          </div>
+        </div>
+      
+    
+      
+        
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px width:100%">
+
+          
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500" for="billing-address-phone">
+  Phone
+</label>
+
+
+<div class="">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="billing-address-phone" name="billing-address-phone" placeholder="" type="tel" value="" v-model="customer['billing-address-phone']">
+  
+</div>
+
+        </div>
+      
+    
+  </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px @mq-768--margin-bottom:32px @mq-768--padding-horizontal:16px @mq-960--margin-bottom:48px @mq-960--padding-horizontal:24px width:100% @mq-768--width:40%">
+
+            <div class="display:flex flex-direction:column pos-top:0 @mq-768--position:sticky">
+              
+  <fieldset class="background-color:blue-dcf0fb padding:32px margin-bottom:16px @mq-upto-768--margin-top:-24px @mq-768--order:1">
+
+                
+
+<legend class="visually-hidden">
+  Promo Code
+</legend>
+
+
+
+<h4 class="color:blue-2c3d57 font-size:20px font-weight:500 @mq-800--font-size:24px color:blue-265f8e margin-bottom:16px margin-top:-8px" aria-hidden="true">
+  Promo Code
+</h4>
+
+
+
+                <div class="display:flex">
+                  
+
+
+
+<label class="color:blue-265f8e display:block padding-bottom:8px font-size:14px font-weight:500 visually-hidden" for="promo-code">
+  Promo code
+</label>
+
+
+<div class="margin-right:12px width:100%">
+  
+    <input class="appearance:none background-color:neutral-ffffff border-color:neutral-4c5b5c border-radius:0 border-style:solid border-width:1px color:neutral-483e40 min-height:form-input padding:12px width:100% :hocus--border-color:neutral-000000" id="promo-code" name="promo-code" placeholder="" type="text" value="" ref="promoField" v-model="promo.code" v-on:enter.prevent="applyPromoCode">
+  
+</div>
+
+
+                  
+
+<button class="display:inline-block font-size:18px font-weight:700 line-height:1 padding-horizontal:24px padding-vertical:12px background-color:orange-ff583d color:neutral-222224 :hocus--background-color:yellow-f0c808" type="button" v-on:click="applyPromoCode">
+  Apply
+</button>
+
+                </div>
+
+                <div aria-live="assertive" role="alert">
+                  <v-promo-code class="margin-top:16px" v-bind:content="promo.isValid ? promo.transientCode + ' was applied to your order' : 'Sorry, ' + promo.transientCode + ' is not valid'" v-bind:valid="promo.isValid" v-if="promo.transientCode"></v-promo-code>
+                </div>
+              </fieldset>
+
+              <!-- <q> -->
+<template q-component="v-order-summary-item">
+  <li>
+    <span>
+      <img class="margin-right:16px max-width:order-summary-image" v-bind:alt="'Photo of ' + item.name + ', ' + item.color" v-bind:src="'/images/products/' + item.parentSlug + '-' + item.color + '.jpg'">
+    </span>
+    <div class="width:100%">
+      <h3 class="color:blue-265f8e font-size:18px line-height:1.166 margin-bottom:2px">
+        {{ item.name }}
+      </h3>
+      <p class="font-size:14px margin-bottom:12px">
+        <span class="display:block">
+          Color: {{ item.displayColor }}
+        </span>
+        <span class="display:block">
+          Size: {{ item.displaySize }}
+        </span>
+      </p>
+      <div class="display:flex font-size:18px justify-content:space-between">
+        <span class="">
+          <span class="" aria-label="Quantity">
+            Qty:
+          </span>
+          {{ item.quantity }}
+        </span>
+        <span class="">
+          {{ formatPrice(item.price * item.quantity) }}
+        </span>
+      </div>
+    </div>
+  </li>
+</template>
+<!-- </q> -->
+
+
+
+  <div class="background-color:blue-dcf0fb padding:32px margin-bottom:16px" v-cloak>
+
+  
+
+<h2 class="color:blue-2c3d57 font-size:20px font-weight:500 @mq-800--font-size:24px color:blue-265f8e margin-bottom:16px margin-top:-8px">
+  Order Summary
+</h2>
+
+  <ul>
+    <li class="color:neutral-483e40 display:flex padding-bottom:20px" is="v-order-summary-item" v-bind:key="item.id" v-bind:item="item" v-for="item in items"></li>
+  </ul>
+
+  <div class="margin-horizontal:-8px">
+    <table class="color:neutral-000000 text-align:left width:100%">
+      <caption class="visually-hidden">
+        Order Total Summary
+      </caption>
+      <tfoot>
+        <tr class="border-top-color:neutral-483e40 border-top-style:solid border-top-width:1px color:blue-2c3d57 font-size:20px font-weight:500">
+          <th class="padding-horizontal:8px padding-vertical:2px vertical-align:top color:blue-265f8e padding-top:12px" scope="row">
+            Order Total
+          </th>
+          <td class="padding-horizontal:8px padding-vertical:2px vertical-align:top color:blue-265f8e padding-top:12px text-align:right">
+            {{ orderTotal }}
+          </td>
+        </tr>
+      </tfoot>
+      <thead>
+        <tr class="border-bottom-color:neutral-483e40 border-bottom-style:solid border-bottom-width:1px">
+          <th scope="col">
+            <span class="visually-hidden">
+              Item
+            </span>
+          </th>
+          <th scope="col">
+            <span class="visually-hidden">
+              Total
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="padding-horizontal:8px padding-vertical:2px vertical-align:top padding-top:16px">
+            Subtotal ({{ cart.quantity }} item<span v-if="cart.quantity > 1">s</span>)
+          </td>
+          <td class="padding-horizontal:8px padding-vertical:2px vertical-align:top padding-top:16px text-align:right">
+            {{ formatPrice(cart.subTotal) }}
+          </td>
+        </tr>
+        <tr v-if="totalDiscount">
+          <td class="padding-horizontal:8px padding-vertical:2px vertical-align:top">
+            Promo Code
+            <v-promo-code v-bind:content="promo.validatedCode" v-bind:valid="true" v-bind:removable="true" v-on:remove-promo-code="removePromoCode"></v-promo-code>
+          </td>
+          <td class="padding-horizontal:8px padding-vertical:2px vertical-align:top text-align:right">
+            -{{ formatPrice(totalDiscount) }}
+          </td>
+        </tr>
+        <tr>
+          <td class="padding-horizontal:8px padding-vertical:2px vertical-align:top">Shipping</td>
+          <td class="padding-horizontal:8px padding-vertical:2px vertical-align:top text-align:right">
+            <template v-if="customer['shipping-cost'] === -1">
+              -
+            </template>
+            <template v-else-if="customer['shipping-cost'] === 0">
+              FREE
+            </template>
+            <template v-else>
+              {{ formatPrice(customer['shipping-cost']) }}
+            </template>
+          </td>
+        </tr>
+        <tr>
+          <td class="padding-horizontal:8px padding-vertical:2px vertical-align:top padding-bottom:16px">
+            Estimated Tax
+          </td>
+          <td class="padding-horizontal:8px padding-vertical:2px vertical-align:top padding-bottom:16px text-align:right">
+            {{ formatPrice(tax) }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+            </div>
+          </div>
+
+          
+  <div class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:24px padding-horizontal:12px @mq-768--margin-bottom:32px @mq-768--padding-horizontal:16px @mq-960--margin-bottom:48px @mq-960--padding-horizontal:24px width:100% @mq-768--width:60%">
+
+            <div class="text-align:center margin-top:-24px">
+              
+
+<p class="color:blue-2c3d57 font-size:20px font-weight:500 @mq-800--font-size:24px margin-bottom:16px color:blue-265f8e @mq-upto-768--display:none" v-text="'Order Total: ' + orderTotal">
+  
+</p>
+
+              
+
+<button class="display:inline-block font-size:18px font-weight:700 line-height:1 padding-horizontal:24px padding-vertical:12px background-color:orange-ff583d color:neutral-222224 :hocus--background-color:yellow-f0c808 max-width:300px width:100%">
+  Place Order
+</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </form>
+</div>
+
+
+
+<footer class="background-color:blue-c5e6f9 color:blue-324f6b padding-horizontal:8px padding-vertical:32px @mq-800--padding-vertical:64px">
+  
+  <div class="margin-horizontal:auto max-width:container padding-horizontal:32px">
+
+    <h2 class="font-weight:500 font-size:28px line-height:1.142 margin-bottom:32px text-align:center @mq-800--font-size:36px @mq-800--font-weight:400 @mq-800--line-height:1.222 @mq-800--margin-bottom:48px">
+      Meet the Robots
+    </h2>
+
+    
+  <ul class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-16px margin-bottom:-32px justify-content:center margin-horizontal:-24px">
+
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/rex/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Rex" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/rex-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Rex
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/dolores/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Dolores" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/dolores-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Dolores
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/bubbles/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Bubbles" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/bubbles-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Bubbles
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/fred/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Fred" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/fred-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Fred
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/rivet/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Rivet" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/rivet-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Rivet
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/eileen/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Eileen" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/eileen-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Eileen
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/belle/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Belle" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/belle-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Belle
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/cosmo/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Cosmo" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/cosmo-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Cosmo
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/dolly/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Dolly" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/dolly-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Dolly
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/sergeant/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Sergeant" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/sergeant-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Sergeant
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/oscar/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Oscar" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/oscar-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Oscar
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/levi/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Levi" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/levi-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Levi
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/elton/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Elton" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/elton-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Elton
+  </span>
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:32px padding-horizontal:16px">
+
+          
+
+<a class="group color:blue-324f6b font-size:20px font-weight:500 line-height:1.2 text-align:center" href="/about/spring/">
+  <span class="border-radius:1000 background-image:character-avatar display:inline-block margin-bottom:8px group:hocus__background-image:character-avatar-hocus">
+    <img alt="Image of Spring" class="@mq-upto-384--size:character-avatar-small" height="144" src="/images/characters/spring-disc.png" width="144">
+  </span>
+  <span class="display:block group:hocus__color:orange-ff583d">
+    Spring
+  </span>
+</a>
+
+        </li>
+      
+    </ul>
+
+    <nav class="margin-horizontal:-48px">
+      <ul class="align-items:center display:inline-flex justify-content:center margin-vertical:32px margin-horizontal:auto flex-wrap:wrap width:100% @mq-800--padding-top:8px">
+        <li class="display:flex justify-content:center margin-bottom:32px width:100% @mq-800--margin-bottom:0 @mq-800--margin-horizontal:32px @mq-800--order:1 @mq-800--width:auto">
+          <a aria-label="Home" href="/">
+            <img class="" alt="Binaryville logo" height="88" src="/images/logo.svg" width="170">
+          </a>
+        </li>
+        <li>
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/about/">
+            About
+          </a>
+        </li>
+        <li>
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/blog/">
+            Blog
+          </a>
+        </li>
+        <li class="@mq-800--order:1">
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/contact/">
+            Contact
+          </a>
+        </li>
+        <li class="@mq-800--order:1">
+          <a class="color:inherit font-size:20px font-weight:500 line-height:1.2 margin-horizontal:8px padding-horizontal:4px :hocus--color:orange-ff583d @mq-800--margin-horizontal:32px" href="/shop">
+            Shop
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <h3 class="visually-hidden">
+      Follow us
+    </h3>
+    
+  <ul class="display:flex flex-grow:1 flex-wrap:wrap margin-horizontal:-8px margin-bottom:-16px justify-content:center margin-bottom:24px">
+
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on facebook" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://www.facebook.com/binaryville/">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#facebook"/>
+</svg>
+
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on twitter" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://twitter.com/binaryville">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#twitter"/>
+</svg>
+
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on instagram" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://www.instagram.com/binaryville/">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#instagram"/>
+</svg>
+
+</a>
+
+        </li>
+      
+        
+  <li class="display:flex flex-direction:column flex-grow:0 flex-shrink:0 margin-bottom:16px padding-horizontal:8px">
+
+          
+
+<a aria-label="Find us on linkedin" class="color:blue-324f6b :hocus--color:orange-ff583d" href="https://www.linkedin.com/company/binaryville">
+  <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom size:40px" focusable="false">
+  <use xlink:href="#linkedin"/>
+</svg>
+
+</a>
+
+        </li>
+      
+    </ul>
+
+    <p class="border-top-style:solid border-top-width:2px font-size:12px letter-spacing:0.33 line-height:1.5 padding-top:24px @mq-800--font-size:14px @mq-800--line-height:1.285 @mq-800--margin-horizontal:64px @mq-800--padding-horizontal:32px @mq-800--text-align:center">
+      This is a fictitious company created by LinkedIn Corporation, or its affiliates, solely for the creation and development of educational training materials. Any resemblance to real products or services is purely coincidental. Information provided about the products or services is also fictitious and should not be construed as representative of actual products or services on the market in a similar product or service category.
+    </p>
+  </div>
+</footer>
+
+
+<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.from"></script>
+<script src="/assets/vendor.js?0625f37913a2cd194a2203fceebee1ec"></script>
+<script src="/assets/main.js?d8948a8cb13029cce7fa35597cd634a0"></script>
+</body>
+</html>
+

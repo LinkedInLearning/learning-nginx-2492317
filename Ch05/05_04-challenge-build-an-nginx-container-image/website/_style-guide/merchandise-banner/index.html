@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>merchandise-banner - Binaryville Styleguide</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  
+    <link rel="stylesheet" href="/assets/main.min.css?[object Object]">
+  
+  <style>
+    #container {
+      padding-top: 46px;
+    }
+
+    #nav {
+      background: #fff;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      position: fixed;
+      top: 0;
+      white-space: nowrap;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    #nav a {
+      display: inline-block;
+      color: #000;
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+
+    #nav a[aria-selected="true"] {
+      background: #eee;
+    }
+
+    #nav a:focus,
+    #nav a:hover {
+      background: #ddd;
+    }
+
+    #props {
+      font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
+      white-space: pre-wrap
+    }
+
+    .padding {
+      padding: 10px;
+    }
+
+    .swatch-title {
+      font-size: 1em;
+    }
+
+    .swatch-list {
+      border-radius: 5px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+      display: inline-flex;
+      flex-wrap: wrap;
+      list-style: none;
+      overflow: hidden;
+      margin: 0.5em 0 1em;
+    }
+
+    .swatch {
+      flex-shrink: 0;
+      height: 90px;
+      overflow: hidden;
+      position: relative;
+      width: 90px;
+    }
+
+    .swatch::after {
+      color: #fff;
+      content: attr(class);
+      font-size: 13px;
+      position: absolute;
+      right: 5px;
+      text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <script>!function(e,n,o){var i=e+"-svg",t=new XMLHttpRequest,s=document.body,a=document.createElement("div"),d=(o||window.location.protocol+"//"+window.location.hostname+(window.location.port?":"+window.location.port:""))+n,c=" no-svg";if(a.id=i,s.insertBefore(a,s.childNodes[0]),"withCredentials"in t)t.withCredentials,t.open("GET",d,!0);else{if("undefined"==typeof XDomainRequest)return s.className+=c;(t=new XDomainRequest).open("GET",d)}t.onload=function(){a.className="visually-hidden",a.innerHTML=t.responseText},t.onerror=function(){s.className+=c},setTimeout(t.send(),0)}("icons","/images/icons.svg")</script>
+  <script>function fetchSvgInline(e){var t=new XMLHttpRequest,i=e.currentSrc||e.src;if("withCredentials"in t)t.withCredentials,t.open("GET",i,!0);else{if("undefined"==typeof XDomainRequest)return;(t=new XDomainRequest).open("GET",i)}t.onload=function(){var i=t.responseText;if(-1!==i.indexOf("<svg")){var n=document.createElement("span");n.innerHTML=i;var s=n.getElementsByTagName("svg")[0];s.setAttribute("aria-label",e.alt||""),s.setAttribute("class",e.className),s.setAttribute("focusable",!1),s.setAttribute("role","img"),e.height&&s.setAttribute("height",e.height),e.width&&s.setAttribute("width",e.width),e.parentNode.replaceChild(s,e)}},t.onerror=function(){e.classList.add("not-inline")},setTimeout(t.send(),0)}</script>
+
+  <div id="container">
+    <ul id="nav">
+      
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/banner/">
+            banner
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/blog-card/">
+            blog-card
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/blog-categories/">
+            blog-categories
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/bordered-panel/">
+            bordered-panel
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/box/">
+            box
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/button/">
+            button
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-avatar/">
+            character-avatar
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-callout/">
+            character-callout
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-hero/">
+            character-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/color-picker/">
+            color-picker
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/content-hero/">
+            content-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/design-callout/">
+            design-callout
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/footer/">
+            footer
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-dropdown/">
+            form-dropdown
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-label/">
+            form-label
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-success-message/">
+            form-success-message
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-text-input/">
+            form-text-input
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-title/">
+            form-title
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-toggle-input/">
+            form-toggle-input
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-toggle-input-group/">
+            form-toggle-input-group
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h2/">
+            h2
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h3/">
+            h3
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h4/">
+            h4
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/header/">
+            header
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/home-hero/">
+            home-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/icon-button/">
+            icon-button
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="true" href="/_style-guide/merchandise-banner/">
+            merchandise-banner
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/page-title/">
+            page-title
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/product/">
+            product
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/promo-code/">
+            promo-code
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/quantity-changer/">
+            quantity-changer
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/shop-hero/">
+            shop-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/size-picker/">
+            size-picker
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/social-icon/">
+            social-icon
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/svg/">
+            svg
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/swatches/">
+            swatches
+          </a>
+        </li>
+      
+    </ul>
+
+    <script>
+      document.querySelector('#nav a[aria-selected="true"]').scrollIntoView();
+    </script>
+
+    <div id="component">
+      
+
+
+<div class="align-items:center display:flex justify-content:space-between overflow:hidden padding-left:32px @mq-768--padding-left:48px background-image:shop-hero-yellow">
+  <div class="line-height:1.375 padding-vertical:24px @mq-768--font-size:18px @mq-768--margin-right:48px @mq-768--line-height:1.166 @mq-768--width:60%">
+    
+      <h2 class="color:orange-ff583d font-size:24px line-height:1.166 margin-bottom:16px @mq-768--font-size:32px @mq-768--line-height:1.125">
+        Merchandise
+      </h2>
+    
+    <img alt="Montage of products" class="float:right shape-outside:product-montage-cropped @mq-768--display:none" height="240" src="/images/product-montage-cropped.png">
+    <p class="margin-bottom:16px @mq-768--margin-bottom:32px">
+       Share your love of technology, and spread good cheer, with Binaryville official merchandise, including t-shirts, hats, mugs, aprons, posters, stickers, and more. 
+    </p>
+    
+      
+
+<a class="display:inline-block font-size:18px font-weight:700 line-height:1 padding-horizontal:24px padding-vertical:12px background-color:orange-ff583d color:neutral-222224 :hocus--background-color:yellow-f0c808" href="/shop/">
+  Visit Shop
+</a>
+
+    
+  </div>
+  <div class="">
+    <picture>
+      <source media="(min-width: 48em)" srcset="/images/product-montage.png">
+      <img alt="Montage of products" class="align-self:center display:none justify-self:center max-width:100% @mq-768--display:inline" src="/images/product-montage-cropped.png">
+    </picture>
+  </div>
+</div>
+
+    </div>
+
+    <pre class="padding" id="props">{
+  &#34;button&#34;: {
+    &#34;href&#34;: &#34;/shop/&#34;,
+    &#34;label&#34;: &#34;Visit Shop&#34;
+  },
+  &#34;color&#34;: &#34;yellow&#34;,
+  &#34;content&#34;: &#34; Share your love of technology, and spread good cheer, with Binaryville official merchandise, including t-shirts, hats, mugs, aprons, posters, stickers, and more. &#34;,
+  &#34;heading&#34;: &#34;Merchandise&#34;
+}</pre>
+  </div>
+
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.from"></script>
+  <script src="/assets/vendor.js?[object Object]"></script>
+  <script src="/assets/main.js?[object Object]"></script>
+</body>
+</html>

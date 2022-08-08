@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>form-toggle-input - Binaryville Styleguide</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  
+    <link rel="stylesheet" href="/assets/main.min.css?[object Object]">
+  
+  <style>
+    #container {
+      padding-top: 46px;
+    }
+
+    #nav {
+      background: #fff;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      position: fixed;
+      top: 0;
+      white-space: nowrap;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    #nav a {
+      display: inline-block;
+      color: #000;
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+
+    #nav a[aria-selected="true"] {
+      background: #eee;
+    }
+
+    #nav a:focus,
+    #nav a:hover {
+      background: #ddd;
+    }
+
+    #props {
+      font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
+      white-space: pre-wrap
+    }
+
+    .padding {
+      padding: 10px;
+    }
+
+    .swatch-title {
+      font-size: 1em;
+    }
+
+    .swatch-list {
+      border-radius: 5px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+      display: inline-flex;
+      flex-wrap: wrap;
+      list-style: none;
+      overflow: hidden;
+      margin: 0.5em 0 1em;
+    }
+
+    .swatch {
+      flex-shrink: 0;
+      height: 90px;
+      overflow: hidden;
+      position: relative;
+      width: 90px;
+    }
+
+    .swatch::after {
+      color: #fff;
+      content: attr(class);
+      font-size: 13px;
+      position: absolute;
+      right: 5px;
+      text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <script>!function(e,n,o){var i=e+"-svg",t=new XMLHttpRequest,s=document.body,a=document.createElement("div"),d=(o||window.location.protocol+"//"+window.location.hostname+(window.location.port?":"+window.location.port:""))+n,c=" no-svg";if(a.id=i,s.insertBefore(a,s.childNodes[0]),"withCredentials"in t)t.withCredentials,t.open("GET",d,!0);else{if("undefined"==typeof XDomainRequest)return s.className+=c;(t=new XDomainRequest).open("GET",d)}t.onload=function(){a.className="visually-hidden",a.innerHTML=t.responseText},t.onerror=function(){s.className+=c},setTimeout(t.send(),0)}("icons","/images/icons.svg")</script>
+  <script>function fetchSvgInline(e){var t=new XMLHttpRequest,i=e.currentSrc||e.src;if("withCredentials"in t)t.withCredentials,t.open("GET",i,!0);else{if("undefined"==typeof XDomainRequest)return;(t=new XDomainRequest).open("GET",i)}t.onload=function(){var i=t.responseText;if(-1!==i.indexOf("<svg")){var n=document.createElement("span");n.innerHTML=i;var s=n.getElementsByTagName("svg")[0];s.setAttribute("aria-label",e.alt||""),s.setAttribute("class",e.className),s.setAttribute("focusable",!1),s.setAttribute("role","img"),e.height&&s.setAttribute("height",e.height),e.width&&s.setAttribute("width",e.width),e.parentNode.replaceChild(s,e)}},t.onerror=function(){e.classList.add("not-inline")},setTimeout(t.send(),0)}</script>
+
+  <div id="container">
+    <ul id="nav">
+      
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/banner/">
+            banner
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/blog-card/">
+            blog-card
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/blog-categories/">
+            blog-categories
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/bordered-panel/">
+            bordered-panel
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/box/">
+            box
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/button/">
+            button
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-avatar/">
+            character-avatar
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-callout/">
+            character-callout
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/character-hero/">
+            character-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/color-picker/">
+            color-picker
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/content-hero/">
+            content-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/design-callout/">
+            design-callout
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/footer/">
+            footer
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-dropdown/">
+            form-dropdown
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-label/">
+            form-label
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-success-message/">
+            form-success-message
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-text-input/">
+            form-text-input
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-title/">
+            form-title
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="true" href="/_style-guide/form-toggle-input/">
+            form-toggle-input
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/form-toggle-input-group/">
+            form-toggle-input-group
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h2/">
+            h2
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h3/">
+            h3
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/h4/">
+            h4
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/header/">
+            header
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/home-hero/">
+            home-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/icon-button/">
+            icon-button
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/merchandise-banner/">
+            merchandise-banner
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/page-title/">
+            page-title
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/product/">
+            product
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/promo-code/">
+            promo-code
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/quantity-changer/">
+            quantity-changer
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/shop-hero/">
+            shop-hero
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/size-picker/">
+            size-picker
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/social-icon/">
+            social-icon
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/svg/">
+            svg
+          </a>
+        </li>
+      
+        <li>
+          <a aria-selected="false" href="/_style-guide/swatches/">
+            swatches
+          </a>
+        </li>
+      
+    </ul>
+
+    <script>
+      document.querySelector('#nav a[aria-selected="true"]').scrollIntoView();
+    </script>
+
+    <div id="component">
+      
+<div class="padding">
+  
+
+<label class="color:neutral-3a3a3d display:flex position:relative">
+  <input class="appearance:none position:absolute size:18px toggle-input:checked-target--opacity:100" name="toggle" type="checkbox" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.">
+  <span class="background-color:neutral-ffffff border-color:blue-265f8e border-style:solid border-width:1px display:inline-block flex-shrink:0 margin-right:12px overflow:hidden position:relative size:18px">
+    <svg class="display:inline-block pointer-events:none svg-fill-color:current svg-fill-rule:even-odd vertical-align:bottom background-color:neutral-3a3a3d color:neutral-ffffff height:100% opacity:0 pos-top-left:0 position:absolute transition-easing:ease transition-duration:200 transition-property:opacity width:100%" focusable="false">
+  <use xlink:href="#toggle-check"/>
+</svg>
+
+  </span>
+  <span>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </span>
+</label>
+
+</div>
+    </div>
+
+    <pre class="padding" id="props">{
+  &#34;label&#34;: &#34;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&#34;,
+  &#34;name&#34;: &#34;toggle&#34;,
+  &#34;type&#34;: &#34;checkbox&#34;
+}</pre>
+  </div>
+
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.from"></script>
+  <script src="/assets/vendor.js?[object Object]"></script>
+  <script src="/assets/main.js?[object Object]"></script>
+</body>
+</html>
