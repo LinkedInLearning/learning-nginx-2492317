@@ -15,7 +15,7 @@ The main commands we'll be using are:
                       ^  ^  ^
  Local port ──────────┘  │  │
                          │  │
- Container port  ─────────┘  │
+ Container port  ────────┘  │
                             │
  Container image name ──────┘
 ```
