@@ -18,5 +18,10 @@ To get started with Docker, you’ll need to have it installed on your local sys
  Container image name ──────┘
 ```
 
-1. Start an nginx container with `docker run --publish 80:80 nginx`.
+1. Start an nginx container
+
+    ```BASH
+    docker run --publish 80:80 nginx`
+    ```
+
 2. Open a browser to [http://localhost](http://localhost)
