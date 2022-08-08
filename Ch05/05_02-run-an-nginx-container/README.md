@@ -10,14 +10,14 @@ The main commands we'll be using are:
 - `docker build ...`: Build a container image from a Dockerfile specification
 
 ## `docker run`
-```
- docker run --publish 80:80 nginx
-                      ^  ^  ^
- Local port ──────────┘  │  │
-                         │  │
- Container port  ────────┘  │
-                            │
- Container image name ──────┘
+```BASH
+docker run --publish 80:80 nginx
+                     ^  ^  ^
+Local port ──────────┘  │  │
+                        │  │
+Container port  ────────┘  │
+                           │
+Container image name ──────┘
 ```
 
 1. Start an nginx container
