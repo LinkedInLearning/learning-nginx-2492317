@@ -1,7 +1,8 @@
 # Learning NGINX 
 This is the repository for the LinkedIn Learning course Learning NGINX. The full course is available from [LinkedIn Learning][lil-course-url].
 
-_See the readme file in the main branch for updated instructions and information._
+_See the readme file in each directory for updated instructions and information._
+
 ## Installing
 1. To use these exercise files, clone this repository to your local machine using:
 	- your terminal (Mac) or CMD (Windows) shell and the `git` command line interface
