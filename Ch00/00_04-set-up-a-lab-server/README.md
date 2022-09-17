@@ -16,8 +16,6 @@ Use the links below for more information on creating a free account on the follo
 ## Use Ubuntu Linux
 The course material covers running NGINX on the [Ubuntu operating system](https://ubuntu.com/)
 
-Its reccommended that you use a cloud
-
 ## Using Windows Subsystem for Linux (WSL) with this Course
 You may choose to run NGINX on [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/) to follow along with this course.
 
