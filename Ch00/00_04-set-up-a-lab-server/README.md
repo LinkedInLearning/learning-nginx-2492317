@@ -19,7 +19,7 @@ The course material covers running NGINX on the [Ubuntu operating system](https:
 ## Using Windows Subsystem for Linux (WSL) with this Course
 You may choose to run NGINX on [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/) to follow along with this course.
 
-Please note that the instructions provided in the course may differ from steps you'll need to follow on WSL.
+Please note that the instructions provided in the course may differ from the steps you'll need to follow on WSL.
 
 For example, reloading NGINX on a standard Ubuntu install would use the `systemctl` command as follows:
 
@@ -38,7 +38,7 @@ Also note that file paths and other configurations may differ between what is me
 ## Using macOS with this Course
 You may choose to run NGINX on [macOS](https://www.apple.com/macos) to follow along with this course.
 
-Please note that the instructions provided in the course may differ from steps you'll need to follow on macOS.
+Please note that the instructions provided in the course may differ from the steps you'll need to follow on macOS.
 
 For example, reloading NGINX on a standard Ubuntu install would use the `systemctl` command as follows:
 
