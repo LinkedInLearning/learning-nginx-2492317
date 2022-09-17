@@ -33,7 +33,7 @@ On WSL, reloading NGINX would use the `service` command as follows:
 service nginx reload
 ```
 
-Also note that file paths and other configurations may differ between what is mentioned in the course and what is in place in your WSL installation.
+Also, note that file paths and other configurations may differ between what is mentioned in the course and what is in place in your WSL installation.
 
 ## Using macOS with this Course
 You may choose to run NGINX on [macOS](https://www.apple.com/macos) to follow along with this course.
@@ -52,5 +52,5 @@ On macOS, if you used [Homebrew](https://formulae.brew.sh/formula/nginx#default)
 brew services reload nginx
 ```
 
-Also note that file paths and other configurations may differ between what is mentioned in the course and what is in place in your macOS installation.
+Also, note that file paths and other configurations may differ between what is mentioned in the course and what is in place in your macOS installation.
 
