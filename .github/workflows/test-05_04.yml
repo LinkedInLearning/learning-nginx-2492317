@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          apt install -qq curl
+          sudo apt install -qq curl
           cd Ch05/05_04-challenge-build-an-nginx-container-image
           docker --version
           docker build --progress plain --tag binaryville .
