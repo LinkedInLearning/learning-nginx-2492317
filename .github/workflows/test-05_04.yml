@@ -12,8 +12,12 @@ jobs:
           docker --version
           docker build --progress plain --tag binaryville .
           docker run --detach --rm --publish 443:443 --name binaryville binaryville
+      
+      - name: Wait
+        run: until [ $(curl -o /dev/null --silent --head --write-out '%{http_code}\n' -Lk https://localhost/) -eq 200 ]; do echo -n '.'; sleep 1; done
+      
       - name: Test
-        run: |
-          until [ $(curl -o /dev/null --silent --head --write-out '%{http_code}\n' -Lk https://localhost/) -eq 200 ]; do echo -n '.'; sleep 1; done
-          curl -sLk https://localhost/ | grep "Welcome to BinaryvilleXYZ"
-          docker stop binaryville
+        run: curl -sLk https://localhost/ | grep "Welcome to BinaryvilleXYZ"
+      
+      - name: Stop
+        run: docker stop binaryville
