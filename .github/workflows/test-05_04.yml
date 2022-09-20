@@ -1,0 +1,15 @@
+name: Copy To Branches
+on:
+  workflow_dispatch:
+jobs:
+  copy-to-branches:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          cd Ch05/05_04-challenge-build-an-nginx-container-image
+          docker --version
+          docker build --progress plain --tag binaryville .
+          docker run --detach --rm --publish 443:443 --name binaryville binaryville
+          curl -sLk https://localhost/
+          docker stop binaryville
