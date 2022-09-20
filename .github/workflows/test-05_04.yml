@@ -6,12 +6,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run test commands
+      - name: Setup
         run: |
-          sudo apt install -qq curl
           cd Ch05/05_04-challenge-build-an-nginx-container-image
           docker --version
           docker build --progress plain --tag binaryville .
           docker run --detach --rm --publish 443:443 --name binaryville binaryville
+      - name: Test
+        run: |
+          echo -n "Waiting for Jenkins process to start ."
+          until [ $(curl -o /dev/null --silent --head --write-out '%{http_code}\n' curl -sLk https://localhost/) -eq 200 ]; do echo -n '.'; sleep 1; done
           curl -sLk https://localhost/
           docker stop binaryville
