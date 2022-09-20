@@ -17,7 +17,7 @@ jobs:
         run: until [ $(curl -o /dev/null --silent --head --write-out '%{http_code}\n' -Lk https://localhost/) -eq 200 ]; do echo -n '.'; sleep 1; done
       
       - name: Test
-        run: curl -sLk https://localhost/ | grep "Welcome to Binaryville" || echo 'Test failed. :('
+        run: curl -sLk https://localhost/ | grep "Welcome to Binaryville"
       
       - name: Stop
         run: docker stop binaryville
