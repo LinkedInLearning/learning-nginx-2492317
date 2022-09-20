@@ -14,6 +14,6 @@ jobs:
           docker run --detach --rm --publish 443:443 --name binaryville binaryville
       - name: Test
         run: |
-          until [ $(curl -o /dev/null --silent --head --write-out '%{http_code}\n' https://localhost/) -eq 200 ]; do echo -n '.'; sleep 1; done
+          until [ $(curl -o /dev/null --silent --head --write-out '%{http_code}\n' -Lk https://localhost/) -eq 200 ]; do echo -n '.'; sleep 1; done
           curl -sLk https://localhost/
           docker stop binaryville
