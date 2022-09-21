@@ -5,7 +5,7 @@ jobs:
   test:
     strategy:
       matrix:
-        platform: [ubuntu-latest]
+        platform: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v2
@@ -16,10 +16,12 @@ jobs:
           docker build --progress plain --tag binaryville .
           docker run --detach --rm --publish 443:443 --name binaryville binaryville
       
-      - name: Wait
+      - name: Wait-Non-Windows
+        if: runner.os != 'Windows'
         run: until [ $(curl -o /dev/null --silent --head --write-out '%{http_code}\n' -Lk https://localhost/) -eq 200 ]; do echo -n '.'; sleep 1; done
       
-      - name: Test
+      - name: Test-Non-Windows
+        if: runner.os != 'Windows'
         run: curl -sLk https://localhost/ | grep "Welcome to Binaryville"
       
       - name: Stop
