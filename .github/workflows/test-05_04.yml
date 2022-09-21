@@ -5,10 +5,10 @@ jobs:
   test:
     strategy:
       matrix:
-        platform: [ubuntu-latest, windows-latest]
+        platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup
         run: |
           cd Ch05/05_04-challenge-build-an-nginx-container-image
@@ -26,3 +26,18 @@ jobs:
       
       - name: Stop
         run: docker stop binaryville
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: false
