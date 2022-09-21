@@ -13,7 +13,7 @@ jobs:
         run: |
           cd Ch05/05_04-challenge-build-an-nginx-container-image
           docker --version
-          docker build --progress plain --tag binaryville .
+          docker build --tag binaryville .
           docker run --detach --rm --publish 443:443 --name binaryville binaryville
       
       - name: Wait-Non-Windows
