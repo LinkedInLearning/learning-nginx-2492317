@@ -10,7 +10,7 @@ cd /root
 
 - Clone the exercise files to the server
 ```
-git clone git@github.com:LinkedInLearning/learning-nginx-2492317.git
+git clone https://github.com/LinkedInLearning/learning-nginx-2492317.git
 ```
 
 - Un-tar the archive into the NGINX root directory
