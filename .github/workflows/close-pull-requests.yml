@@ -1,0 +1,24 @@
+name: Close Pull Requests
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  close-pr:
+    name: Close PR
+    runs-on: ubuntu-latest
+    # Only run if the PR author is NOT managedkaos
+    if: github.event.pull_request.user.login != 'managedkaos'
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Close unauthorized PR
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Closing PR #$PR_NUMBER from $PR_AUTHOR"
+          gh pr close "$PR_NUMBER" --comment "This repository does not accept pull requests (PRs). All pull requests will be closed."
